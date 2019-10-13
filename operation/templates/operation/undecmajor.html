@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block title %}중앙운영위원회 | 자율전공학부{% endblock %}
+
+{% block contents %}
+    <div id="wrapper">
+        <div id="container">
+
+                <div class="side-menu">
+                    <p class="main-title">중앙운영위원회</p>
+                    <ul class="menu">
+                        <li>
+                            <a class=" " href="{% url 'operation:category_all' 'introduction' %}">단위별 소개</a>
+                        </li>
+                        <li><a class="inner-menu" href="/operation/introduction/sangju">-상주학생위원회</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/dongari">-총동아리연합회</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/humanities">-인문대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/socialsci">-사회과학대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/naturalsci">-자연과학대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/bizadm">-경상대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/engineering">-공과대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/IT">-IT대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/agriculture">-농업생명과학대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/arts">-예술대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/teachers">-사범대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/medicine">-의과대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/dentistry">-치과대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/vet">-수의과대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/humaneco">-생활과학대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/nursing">-간호대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/pharmacy">-약학대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/ecology">-생태환경대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/technology">-과학기술대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/publicadm">-행정학부</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/undecmajor">-자율전공부</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/globalleaders">-글로벌인재학부</a></li>
+                        <li>
+                            <a class=" " href="{% url 'operation:category_all' 'board' %}">게시판</a>
+                        </li>
+            </ul>
+                </div>
+
+
+                <div class="intro">
+                    <h2 id="container_title">자율전공학부 소개</h2>
+                    <span class="path">홈 > 중앙운영위원회 > 자율전공학부</span>
+                    {% load static %}
+                    <div class="content">
+                        <p class="sub-title" style="text-align: center;">
+                            <span style="font-size: 23px;">제 20대 EU있는 학생회</span>
+                        </p>
+                        <p>
+                            <span stlye="font-size: 20px;">경북대학교 자율전공부는 2000년을 기점으로 현재(2019년)까지 매년 학생회가 구성되고 있습니다. 자율전공부는 학생회 이름에 있어 '~~있는 학생회' 라는 전통을 가지고 있습니다.</span>
+                        </p>
+                        <p>
+                            <span stlye="font-size: 20px;">2019년 자율전공부 학생회 이름은 제 20대 이유(EU)있는 학생회로 3가지의 뜻이 존재합니다.<br>
+                                                           1. 저희 학생회가 존재하는 ‘이유’를 보여주겠다.<br>
+                                                           2. 한자로 ‘邇 學’ (가까울 이 배울 학) 가깝게 다가가서 학우들의 곁에서 배우겠다.<br>
+                                                           3. ‘Energetic Undeclared major’를 줄인 EU</span>
+                        </p>
+                        <p>
+                            <span stlye="font-size: 20px;">EU있는 학생회 구성은 학생회장과 부학생회장으로 인문대표, 자연대표로 2명의 자율전공부의 특성을 고려하여 2명의 부회장이 존재합니다. 집행부는 사무국장, 기획부장, 홍보부장, 문체부장, 실무단장 2명으로 구성되어 있습니다. 인문사회자율전공과 자연과학자율전공에는 각 반과 반마다의 학생회가 존재합니다. 인문 A, B, C, D반대표, 부 반대표 자연 E, F반대표, 부 반대표 그리고 각 반 마다 집행부가 존재합니다.</span>
+                        </p>
+                        <p>
+                            <span stlye="font-size: 20px;">제 20대 EU있는 학생회는 1학년 밖에 없는 자율전공부 학우들을 위해 새내기의 추억을 목표로 향하고 있으며 이를 위해 소통, 실천을 중심으로 노력하고 있습니다. 저희는 1년이 목표가 아닌 미래의 자율전공부를 위하여 항상 개선하는 EU있는 학생회가 되겠습니다.</span>
+                        </p>
+
+
+                </div>
+
+        </div>
+
+    </div>
+{% endblock %}

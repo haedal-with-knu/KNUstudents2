@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% block title %}중앙운영위원회 | 상주위원회{% endblock %}
+
+{% block contents %}
+    <div id="wrapper">
+        <div id="container">
+
+                <div class="side-menu">
+                    <p class="main-title">중앙운영위원회</p>
+                    <ul class="menu">
+                        <li>
+                            <a class=" " href="{% url 'operation:category_all' 'introduction' %}">단위별 소개</a>
+                        </li>
+                        <li><a class="inner-menu" href="/operation/introduction/sangju">-상주학생위원회</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/dongari">-총동아리연합회</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/humanities">-인문대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/socialsci">-사회과학대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/naturalsci">-자연과학대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/bizadm">-경상대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/engineering">-공과대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/IT">-IT대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/agriculture">-농업생명과학대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/arts">-예술대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/teachers">-사범대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/medicine">-의과대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/dentistry">-치과대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/vet">-수의과대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/humaneco">-생활과학대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/nursing">-간호대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/pharmacy">-약학대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/ecology">-생태환경대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/technology">-과학기술대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/publicadm">-행정학부</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/undecmajor">-자율전공부</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/globalleaders">-글로벌인재학부</a></li>
+                        <li>
+                            <a class=" " href="{% url 'operation:category_all' 'board' %}">게시판</a>
+                        </li>
+            </ul>
+                </div>
+
+
+                <div class="intro">
+                    <h2 id="container_title">상주위원회 소개</h2>
+                    <span class="path">홈 > 중앙운영위원회 > 상주위원회</span>
+                    {% load static %}
+                    <div class="content">
+                        <p class="sub-title" style="text-align: center;">
+                            <span style="font-size: 23px;">"IF로 채워질 당신의 LIFE"</span>
+                        </p>
+                        <p>
+                            <span stlye="font-size: 20px;">안녕하십니까, IF로 채워질 당신의 LIFE. 민족 경북대학교 상주캠퍼스 제28대 IF학생위원회 인사드리겠습니다. 2018년이 지나가고 어느덧 2019년 새 해가 밝았습니다. 우선 2018년 한 해 동안 고생해주신 W학생위원회, 선거운동기간 동안 수고해준 운동본부 참모들, 무엇보다 저희를 이 자리에 있게 해준 경북대학교 상주캠퍼스 모든 학우 여러분들께 감사의 말씀 먼저 드립니다.</span>
+                        </p>
+                        <p>
+                            <span stlye="font-size: 20px;">이번 2019년 올 한 해에는 학우 여러분들께 더 많은 정보와 혜택을 드리기 위해 지난 한 해 동안 아쉬웠던 점이나 미비했던 점들을 운동기간 동안 모든 학우 분들의 소리를 모아 공약을 준비하였습니다. 학우 여러분들의 원활한 학교생활과 학업 또는 취업고민을 해결하기 위해 올해는 공약에 더 힘을 싣고자 합니다. 또한 경북대학교 총학생회 “희열”과 함께 하나의 경북대학교로써 학우 여러분들께서 더 많은 혜택을 누릴 수 있는 공약도 함께 준비하였습니다. 물론, 선거운동기간동안 수 없이 외치던 공약이지만 올 한 해 중점적으로 이행하도록 하겠습니다.</span>
+                        </p>
+                        <p>
+                            <span stlye="font-size: 20px;">저희 IF학생회에서는 부족한 2%를 채우기 위해 2019년 한 해 동안 노력하겠습니다.<br>
+                                                           IF로 채워질 당신의 LIFE, 학우 여러분! 저희 IF와 함께 2% 채워 가시겠습니까?</span>
+                        </p>
+
+                        <p><img src="{% static 'sangju1.jpg' %}" style="width:100%;"></p>
+                        <p class="name"><span><strong>민족 경북대학교 상주캠퍼스 제28대 IF 학생위원회</strong></span></p>
+
+
+
+                </div>
+
+        </div>
+
+    </div>
+{% endblock %}

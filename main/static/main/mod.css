@@ -1,0 +1,887 @@
+@font-face {
+  font-family: 'Nanum Barun Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/NanumBarunGothic.eot);
+  src: local('Nanum Barun Gothic'),
+  local('NanumBarunGothic'),
+  url(../font/NanumBarunGothic.eot?#iefix) format('embedded-opentype'),
+  url(../font/NanumBarunGothic.woff2) format('woff2'),
+  url(../font/NanumBarunGothic.woff) format('woff'),
+  url(../font/NanumBarunGothic.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Barun Gothic Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../font/NanumBarunGothicBold.eot);
+  src: local('Nanum Barun Gothic Bold'),
+  local('NanumBarunGothicBold'),
+  url(../font/NanumBarunGothicBold.eot?#iefix) format('embedded-opentype'),
+  url(../font/NanumBarunGothicBold.woff2) format('woff2'),
+  url(../font/NanumBarunGothicBold.woff) format('woff'),
+  url(../font/NanumBarunGothicBold.ttf) format('truetype');
+}
+
+/* carousel */
+.bootstrap2 .carousel {
+  height: 500px;
+  margin-bottom: 60px;
+}
+.bootstrap2 .carousel-caption {
+  z-index: 10;
+  width: 960px;
+  margin: 0 auto;
+  padding: 0;
+  background: inherit;
+}
+.bootstrap2 .carousel .item {
+  height: 500px;
+  background-color: #777;
+}
+.bootstrap2 .carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+}
+.bootstrap2 .marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.bootstrap2 .marketing h2 {
+  font-weight: normal;
+}
+.bootstrap2 .marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.bootstrap2 .featurette-divider {
+  margin: 80px 0;
+}
+.bootstrap2 .featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+  margin-top: 120px;
+}
+.bootstrap2 .carousel-indicators {
+  position: relative;
+  display: inline-block;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  width: auto;
+  margin: 0 auto;
+  padding-left: 0;
+  list-style: none;
+}
+.bootstrap2 .carousel-indicators > li {
+  cursor: pointer;
+  display: inline-block;
+  float: inherit;
+  margin: 0 4px;
+}
+
+.bootstrap2 .pagination > ul > li > a {
+  font-family: "Nanum Barun Gothic Bold";
+  font-size: 14px;
+  color: #7f7f7f;
+}
+.bootstrap2 .pagination > ul > li:first-child > a,
+.bootstrap2 .pagination > ul > li:last-child > a {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.bootstrap2 .pagination > ul > li > a.cur_page {
+  color: #c40c1d;
+}
+.bootstrap2 .pagination > ul > li > a.cur_page:focus,
+.bootstrap2 .pagination > ul > li > a.cur_page:hover {
+  background-color: inherit;
+}
+
+
+html, body {
+  font-family: 'Nanum Barun Gothic';
+  font-weight: 400;
+}
+
+#header {
+  min-width: 960px;
+  width: 100%;
+  height: 34px;
+  margin: 0;
+  padding: 0;
+  background-color: #d6cabc;
+  border-bottom: 1px solid #cabeb0;
+}
+#header > .container {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0;
+}
+#header > .container > #tnb > li > a {
+  height: 34px;
+  font-size: 13px;
+  color: #7e6d59;
+  padding-top:2px;
+}
+
+#menu {
+  position: relative;
+  z-index: 1024;
+  min-width: 960px;
+  width: 100%;
+  height: 70px;
+  margin: 0 0 0 0;
+  padding: 0;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+}
+#menu > .container {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0;
+}
+#menu > .container .logo {
+  float: left;
+}
+#menu > .container .logo-img {
+  display: inline-block;
+  vertical-align: top;
+  margin: 12px auto 0 10px;
+}
+#menu > .container .logo-text {
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Nanum Barun Gothic Bold';
+  font-size:25px;
+  font-weight: 700;
+  color: #8b0029;
+  vertical-align: top;
+  margin: 23px auto 0 14px;
+}
+#menu > .container .logo-text:hover,
+#menu > .container .logo-text:focus {
+  text-decoration: none;
+}
+
+#gnb {
+  width: 960px;
+  height: 70px;
+  margin: 0 auto;
+  border: none;
+  background-color: inherit;
+}
+#gnb_1dul {
+  float: right;
+  width: auto;
+  padding: 0;
+}
+.gnb_1da {
+  min-width: 128px;
+  width: auto;
+  height: 58px;
+  margin: 0;
+  padding: 12px 0 0 0;
+  font-size: 18px;
+  font-weight: 400;
+  color: #212121;
+  background-image: none;
+  text-align: center;
+}
+.gnb_1da:hover,
+.gnb_1da:focus {
+  color: inherit;
+  background-image: none;
+  background-color: inherit;
+}
+.gnb_1dli_air .gnb_1da,
+.gnb_1dli_on .gnb_1da  {
+  color: #8b0029;
+  background-color: inherit;
+}
+
+.gnb_2dul {
+  top:70px;
+  width: 120%;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  border: 1px solid #efefef;
+  border-top: none;
+}
+.gnb_1dli_over .gnb_2dul,
+.gnb_1dli_over2 .gnb_2dul {
+  display: block;
+  left: 0;
+  background: #ffffff;
+}
+
+.gnb_2da {
+  font-size: 14px;
+  border-top: 1px solid #efefef;
+  color: #212121;
+  background-color: inherit;
+  padding: 15px 10px 13px 14px;
+  text-decoration: none;
+  text-align: left;
+}
+.gnb_1dli_on .gnb_2da,
+.gnb_1dli_over .gnb_2da,
+.gnb_2da:focus {
+  color: inherit;
+  background-color: inherit;
+}
+.gnb_2da:hover {
+  color: #8b0029;
+  background-color: inherit;
+  text-decoration: none;
+}
+#gnb .inner-menu {
+  padding-left: 18px;
+}
+
+#footer {
+  display: block;
+  min-width: 960px;
+  width: 100%;
+  height: 122px;
+  margin: 0 auto;
+  border-top: 2px solid #e9e9e9;
+  background-color: #ffffff;
+}
+#footer.main-footer {
+  border-top: none;
+}
+#footer > .container {
+  width: 960px;
+  margin: 0 auto;
+}
+#footer > .container > .info {
+  margin: 16px 0 0 0;
+}
+#footer > .container > .info > a {
+  font-family: 'Nanum Barun Gothic';
+  font-size: 11px;
+  font-weight: 400;
+  color: #898989;
+}
+#footer > .container > .info > a:hover,
+#footer > .container > .info > a:focus {
+  text-decoration: underline;
+}
+#footer > .container > .info > span {
+  font-family: 'Nanum Barun Gothic';
+  font-size: 11px;
+  font-weight: 400;
+  color: #898989;
+  text-decoration: none;
+}
+#footer > .container > .company {
+  margin: 18px 0 0 0;
+  padding: 0;
+  font-family: 'Nanum Barun Gothic';
+  font-size: 11px;
+  font-weight: 700;
+  color: #8b0029;
+}
+#footer > .container > .address {
+  margin: 11px 0 0 0;
+  padding: 0;
+  font-family: 'Nanum Barun Gothic';
+  font-size: 11px;
+  font-weight: 400;
+  color: #898989;
+}
+#footer > .container > .address > a,
+#footer > .container > .address > a:hover,
+#footer > .container > .address > a:focus {
+  font-family: 'Nanum Barun Gothic';
+  font-size: 11px;
+  font-weight: 400;
+  color: #898989;
+  text-decoration: none;
+}
+#footer > .container > .copyright {
+  margin: 9px 0 0 0;
+}
+#footer > .container > .copyright > span{
+  margin: 8px 0;
+  padding: 0;
+  font-family: 'Nanum Barun Gothic';
+  font-size: 11px;
+  font-weight: 400;
+  color: #898989;
+}
+#footer > .container > a.facebook {
+  float: right;
+  margin: 23px 18px 0 0;
+}
+#footer > .container span.space {
+  margin: 0 8px;
+}
+
+
+#wrapper {
+  position: relative;
+  float: inherit;
+  min-width: 960px;
+  width: 100%;
+  border: none;
+}
+#wrapper > #container {
+  position: inherit;
+  float: inherit;
+  min-height: inherit;
+  width: 960px;
+  height: 100% !important;
+  border: none;
+  margin: 0 auto;
+  padding: 0;
+  background-color: inherit;
+}
+
+/* for main */
+#wrapper.main {
+  height: 675px;
+}
+#wrapper.main > #container {
+  min-width: 960px;
+  width: 100%;
+}
+#wrapper.main > #container .bg1 {
+  background-image: url('../img/main_picture1.jpg');
+  background-position: center;
+  background-size: cover;
+}
+#wrapper.main > #container .bg2 {
+  background-image: url('../img/main_picture2.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+#wrapper.main > #container .bg3 {
+  background-image: url('../img/main_picture3.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+#wrapper.main > #container .bg4 {
+  background-image: url('../img/main_picture4.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+#wrapper.main > #container .bg5 {
+  background-image: url('../img/main_picture5.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+#wrapper.main .main-slider .item{
+    background-position: center;
+    background-size: cover;
+}
+
+#wrapper.main .main-slider .slider-image-01{
+    background-image: url('../img/main_slide_01.jpg');
+}
+#wrapper.main .main-slider .slider-image-02{
+    background-image: url('../img/main_slide_02.jpg');
+}
+#wrapper.main .main-slider .slider-image-03{
+    background-image: url('../img/main_slide_03.jpg');
+}
+
+#wrapper.main > #container div {
+  height: 100% !important;
+}
+#wrapper.main > #container div.abs-block {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 674px !important;
+  margin-top: 1px;
+  text-align: center;
+}
+#wrapper.main > #container div.abs-block > div.center-block {
+  display: inline-block;
+  width: 960px;
+  margin: 0;
+  padding: 0;
+}
+#wrapper.main > #container .black-background {
+  position: absolute;
+  z-index: -1;
+  width: 960px;
+  height: 675px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  opacity: 0.4;
+  background-color: black;
+}
+#wrapper.main > #container p.title {
+  margin-top: 278px;
+  font-family: 'Nanum Barun Gothic Bold';
+  font-size: 45px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  text-shadow: 0 3px 3px rgba(0, 0, 0, 0.13);
+}
+#wrapper.main > #container p.sub-title {
+  margin-top: 48px;
+  font-family: 'Nanum Barun Gothic Bold';
+  font-size: 35px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  text-shadow: 0 3px 3px rgba(0, 0, 0, 0.13);
+}
+#wrapper.main > #container div.abs {
+  position: absolute;
+  z-index: 13;
+  min-width: 960px;
+  width: 100%;
+  height: auto !important;
+  margin-top: 649px;
+  text-align: center;
+}
+
+#wrapper.main > #container .catch-phrase p.title{
+    margin-top:180px;
+    font-size: 52px;
+    line-height: 66px;
+    letter-spacing: 3px;
+    text-shadow: 0 3px 3px rgb(147, 44, 65);
+}
+#wrapper.main > #container .catch-phrase p.title > span{
+    font-weight:normal;
+}
+#wrapper.main > #container .catch-phrase p.sub-title{
+    margin-top:30px;
+    font-size: 24px;
+    text-shadow: 0 3px 3px rgb(147, 44, 65);
+}
+#wrapper.main > #container .catch-phrase .button-intro{
+    display: inline-block;
+    margin-top: 48px;
+    width: 230px;
+    height: 40px;
+    line-height: 43px;
+    font-size: 22px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 0 3px 3px rgb(147, 44, 65);
+    border: solid 5px #fff;
+    border-radius: 13px;
+    box-shadow: 0 3px 3px rgb(147, 44, 65);
+}
+
+.main-description-box{
+    padding: 100px 20px;
+    text-align: center;
+    line-height: 24px;
+    font-size: 16px;
+}
+.main-desc-title{
+    font-size:32px;
+    font-weight:bold;
+}
+.main-desc-separator{
+    margin:20px auto;
+    width:850px;
+    height:5px;
+    background-color:#8b0029;
+}
+.main-desc-intro{
+    font-size:22px;
+}
+.main-desc-emphasis{
+    color:#8b0029;
+    font-weight:bold;
+}
+
+.main-quick-menu-box{
+    padding-bottom:30px;
+    text-align: center;
+    background-color: #ece8e4;
+}
+.main-quick-menu-title{
+    margin: 0 auto;
+    width: 850px;
+    line-height: 80px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #8b0029;
+    text-align: left;
+    letter-spacing: 1px;
+}
+.main-quick-menu-col{
+    display:inline-block;
+    width:230px;
+}
+.main-quick-menu-col .main-quick-icon{
+    display:inline-block;
+    width:150px;
+    height:150px;
+    vertical-align:middle;
+    background-repeat:no-repeat;
+    background-position: 50%;
+    background-size:cover;
+}
+.main-quick-menu-col .main-quick-icon.icon01{
+    background-image:url("../img/main_icon_rule.png");
+}
+.main-quick-menu-col .main-quick-icon.icon02{
+    background-image:url("../img/main_icon_rooms.png");
+}
+.main-quick-menu-col .main-quick-icon.icon03{
+    background-image:url("../img/main_icon_rent.png");
+}
+.main-quick-menu-col .main-quick-icon.icon04{
+    background-image:url("../img/main_icon_facebook.png");
+}
+.quick-icon-title{
+    margin-top: 15px;
+    line-height: 45px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #8b0029;
+}
+
+.main_board_calendar_box{
+    margin:0 auto;
+    padding: 50px 0;
+    width:850px;
+    overflow:auto;
+}
+.main_board_calendar_box .lt_more a{
+    font-size: 14px;
+}
+.main_board_synergy .lt{
+    width:100%;
+    height:auto;
+    min-height:150px;
+}
+.main_board_synergy .lt ul{
+    font-size:15px;
+    line-height:20px;
+}
+.main_board_synergy .lt .lt_title{
+    font-size:16px;
+}
+.main_board_synergy .lt .lt_title a{
+    font-size: 24px;
+    font-weight: bold;
+    color: #8b0029;
+    letter-spacing: 1px;
+}
+.main_board_synergy .lt .ku_ca_name{
+    display:inline-block;
+    width: 120px;
+}
+.main_board_synergy .lt .ku_date{
+    float:right;
+}
+.main_board_question{
+    float: left;
+    padding-right: 50px;
+    width: 450px;
+}
+
+.main_board_question .lt{
+    width:100%;
+    height:auto;
+    min-height:250px;
+}
+.main_board_question .lt .lt_title{
+    font-size:16px;
+}
+.main_board_question .lt .lt_title a{
+    font-size: 24px;
+    font-weight: bold;
+    color: #8b0029;
+    letter-spacing: 1px;
+}
+.main_board_question .lt ul{
+    font-size:15px;
+    line-height:20px;
+}
+.main_board_question .lt .ku_ca_name{
+    display:inline-block;
+    width: 120px;
+}
+.main_board_question .lt .ku_date{
+    float:right;
+}
+
+.main_calendar_box{
+    float:left;
+    width:350px;
+}
+.main_calendar_title_box{
+    padding: 10px 0 8px;
+}
+.main_calendar_title{
+    display:inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #8b0029;
+    letter-spacing: 1px;
+}
+.main_calendar_link{
+    float:right;
+    font-size:14px;
+}
+
+/* for side-menu */
+#wrapper > #container > div.side-menu {
+  display: inline-block;
+  margin-top: 49px;
+  width: 220px;
+  vertical-align: top;
+  float: left;
+}
+#wrapper > #container > div.side-menu > .main-title {
+  font-family: 'Nanum Barun Gothic Bold';
+  font-size: 18px;
+  font-weight: 400;
+  color: #212121;
+}
+#wrapper > #container > div.side-menu > ul.menu {
+  list-style: none;
+  margin: 25px 0 0 0;
+  padding: 0;
+  border-top: 2px solid #212121;
+  border-bottom: 2px solid #212121;
+}
+#wrapper > #container > div.side-menu > ul.menu > li {
+  border-top: 1px solid #c8c8c8;
+}
+#wrapper > #container > div.side-menu > ul.menu > li:first-child {
+  border: none;
+}
+#wrapper > #container > div.side-menu > ul.menu > li > a {
+  display: block;
+  font-family: 'Nanum Barun Gothic';
+  font-size: 14px;
+  font-weight: 400;
+  color: #212121;
+  padding: 17px 0 18px 20px;
+}
+#wrapper > #container > div.side-menu > ul.menu > li > a:hover,
+#wrapper > #container > div.side-menu > ul.menu > li > a:focus {
+  color: #8b0029;
+  text-decoration: none;
+}
+#wrapper > #container > div.side-menu > ul.menu > li > a.current {
+  font-family: 'Nanum Barun Gothic Bold';
+  color: #8b0029;
+}
+#wrapper > #container > div.side-menu > ul.menu > li > a.inner-menu {
+  margin-left: 16px;
+}
+
+/* for contact */
+#wrapper > #container > div.contact {
+  max-width: 670px;
+  width: 100%;
+  margin: 169px auto 240px auto;
+}
+#wrapper > #container > div.contact > p.title {
+  font-family: 'Nanum Barun Gothic';
+  font-size: 24px;
+  font-weight: 700;
+  color: #212121;
+  text-align: center;
+}
+#wrapper > #container > div.contact > p.sub-title {
+  font-family: 'Nanum Barun Gothic';
+  font-size: 18px;
+  font-weight: 700;
+  color: #8b0029;
+  margin: 75px 0 0 0;
+  text-align: center;
+}
+#wrapper > #container > div.contact > div.address {
+  width: 100%;
+  margin: 39px 0 0 0;
+}
+#wrapper > #container > div.contact > div.address > p {
+  font-family: 'Nanum Barun Gothic';
+  font-size: 14px;
+  font-weight: 400;
+  color: #595959;
+  margin: 16px 0 16px 55px;
+}
+#wrapper > #container > div.contact > div.address > p > a {
+  font-family: 'Nanum Barun Gothic';
+  font-size: 14px;
+  font-weight: 400;
+  color: #595959;
+  margin: 16px 0;
+}
+#wrapper > #container > div.contact > div.address > p > a:focus,
+#wrapper > #container > div.contact > div.address > p > a:hover {
+  text-decoration: none;
+}
+#wrapper > #container > div.contact > div.address > p > a.addr_facebook:focus,
+#wrapper > #container > div.contact > div.address > p > a.addr_facebook:hover {
+  text-decoration: underline;
+}
+#wrapper > #container > div.contact > div.address > p > span.bold {
+  display: inline-block;
+  width: 80px;
+  font-weight: bold;
+  color: #212121;
+}
+@charset "utf-8";
+
+#wrapper > #container > div.intro {
+  float: right;
+  width: 701px;
+  vertical-align: top;
+}
+#wrapper > #container > div.intro > #container_title {
+  display: inline-block;
+  font-family: 'Nanum Barun Gothic Bold';
+  font-size: 20px;
+  font-weight: 400;
+  color: #212121;
+  margin: 49px 0 0 8px;
+}
+#wrapper > #container > div.intro > span.path {
+  float: right;
+  font-family: 'Nanum Barun Gothic';
+  font-size: 12px;
+  font-weight: 400;
+  color: #888888;
+  margin: 56px 11px 0 0;
+}
+#wrapper > #container > div.intro > div.content {
+  border-top: 2px solid #212121;
+  margin: 21px 0 96px 0;
+}
+#wrapper > #container > div.intro > div.content > p {
+  font-family: 'Nanum Barun Gothic';
+  font-size: 14px;
+  font-weight: 400;
+  color: #212121;
+  line-height: 24px;
+  margin: 24px 0;
+}
+#wrapper > #container > div.intro > div.content > p.sub-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 40px 0 24px 0;
+}
+#wrapper > #container > div.intro > div.content > p.bold {
+  font-weight: 700;
+}
+#wrapper > #container > div.intro > div.content > p.name {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 64px 0 0 0;
+  text-align: right;
+}
+
+#wrapper > #container > div.depart {
+  float: right;
+  width: 701px;
+  vertical-align: top;
+}
+#wrapper > #container > div.depart > #container_title {
+  display: inline-block;
+  font-family: 'Nanum Barun Gothic Bold';
+  font-size: 20px;
+  font-weight: 400;
+  color: #212121;
+  margin: 49px 0 0 8px;
+}
+#wrapper > #container > div.depart > span.path {
+  float: right;
+  font-family: 'Nanum Barun Gothic';
+  font-size: 12px;
+  font-weight: 400;
+  color: #888888;
+  margin: 56px 11px 0 0;
+}
+#wrapper > #container > div.depart > div.content {
+  border-top: 2px solid #212121;
+  margin: 21px 0 96px 0;
+}
+#wrapper > #container > div.depart > div.content > p {
+  font-family: 'Nanum Barun Gothic';
+  font-size: 14px;
+  font-weight: 400;
+  color: #212121;
+  line-height: 24px;
+  margin: 24px 0;
+}
+#wrapper > #container > div.depart > div.content > p > span.title {
+  font-weight: 700;
+}
+
+#wrapper > #container > div.address {
+  float: right;
+  width: 701px;
+  vertical-align: top;
+}
+#wrapper > #container > div.address > #container_title {
+  display: inline-block;
+  font-family: 'Nanum Barun Gothic Bold';
+  font-size: 20px;
+  font-weight: 400;
+  color: #212121;
+  margin: 49px 0 0 8px;
+}
+#wrapper > #container > div.address > span.path {
+  float: right;
+  font-family: 'Nanum Barun Gothic';
+  font-size: 12px;
+  font-weight: 400;
+  color: #888888;
+  margin: 56px 11px 0 0;
+}
+#wrapper > #container > div.address > div.content {
+  border-top: 2px solid #212121;
+  margin: 21px 0 96px 0;
+}
+#wrapper > #container > div.address > div.content > #map {
+  width: 100%;
+  height: 340px;
+  margin: 24px 0 0 0;
+}
+#wrapper > #container > div.address > div.content > div.text {
+  width: 100%;
+  margin: 32px 0 0 0;
+}
+#wrapper > #container > div.address > div.content > div.text > p,
+#wrapper > #container > div.address > div.content > div.text > p > a {
+  font-family: 'Nanum Barun Gothic';
+  font-size: 14px;
+  font-weight: 400;
+  color: #595959;
+  margin: 16px 0;
+}
+#wrapper > #container > div.address > div.content > div.text > p > a:focus,
+#wrapper > #container > div.address > div.content > div.text > p > a:hover {
+  text-decoration: none;
+}
+#wrapper > #container > div.address > div.content > div.text > p > a.addr_facebook:focus,
+#wrapper > #container > div.address > div.content > div.text > p > a.addr_facebook:hover {
+  text-decoration: underline;
+}
+#wrapper > #container > div.address > div.content > div.text > p > span.bold {
+  display: inline-block;
+  width: 80px;
+  font-weight: bold;
+  color: #212121;
+}

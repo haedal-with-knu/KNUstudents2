@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}총학생회 조직도 | 경북대학교 총학생회{% endblock %}
+
+{% block contents %}
+    <div id="wrapper">
+        <div id="container">
+
+            <div class="side-menu">
+                <p class="main-title">총학생회 소개</p>
+                <ul class="menu">
+                    <li>
+                        <a class=" " href="/instructions/">총학생회장단 인사</a>
+                    </li>
+                    <li>
+                        <a class="current" href="#">총학생회 조직도</a>
+                    </li>
+                    <li>
+                        <a class=" " href="/instructions/history/">역대 총학생회</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="depart">
+                <h2 id="container_title">총학생회 조직도</h2>
+                <span class="path">홈 > 총학생회 소개 > 총학생회 조직도</span>
+                {% load static %}
+                <div class="content">
+                    <p><img src="{% static 'instructions/depart.png' %}" style="width:100%;"></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

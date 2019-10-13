@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% block scrpt %}
+    {% endblock %}
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  {% load static %}
+  <link rel="stylesheet"  href="{% static 'mod.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+  <link rel="shortcut icon" href="{% static 'favicon.txt' %}">
+
+    {% block extrahead %}
+    {% endblock %}
+  <title>{% block title %}{% endblock %}</title>
+  <script>
+
+    // 자바스크립트에서 사용하는 전역변수 선언
+    var g5_url       = "http://koreastudent.kr";
+    var g5_bbs_url   = "http://koreastudent.kr/bbs";
+    var g5_is_member = "";
+    var g5_is_admin  = "";
+    var g5_is_mobile = "";
+    var g5_bo_table  = "";
+    var g5_sca       = "";
+    var g5_editor    = "";
+    var g5_cookie_domain = "";
+
+  </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+</head>
+<body>
+  <div id="header">
+      <div class="container">
+          <ul id="tnb">
+              <li><a href="https://facebook.com/knuchonghak/"><i class="fab fa-facebook-f fa-lg"></i></a></li>
+              <li><a href="https://instagram.com/knu_ch?igshid=rncxyduaxum5"><i class="fab fa-instagram fa-lg"></i></a></li>
+              <li><a href="http://pf.kakao.com/_mVXvj"><i class="far fa-comment-dots fa-lg"></i></a></li>
+          </ul>
+      </div>
+  </div>
+  <div id="menu" class="bg-primary">
+    <div class="container">
+        <nav id="gnb">
+            <h2>로고</h2>
+            <div class="logo row">
+                <div class="d-flex align-items-center">
+                    <a href="http://ch.knu.ac.kr"><img class="logo-img pb-1" src="{% static 'main/logo_w2.png' %}"></a>
+                    <a class="text-white logo-text pb-2" href="/">경북대학교 총학생회</a>
+                </div>
+            </div>
+            <h2>메인메뉴</h2>
+            <ul id="gnb_1dul">
+                <li class="gnb_1dli" style="z-index:999">
+                    <a href="/instructions/" target="_self" class="gnb_1da text-white">총학생회 소개</a>
+                    <ul class="gnb_2dul">
+                        <li class="gnb_2dli"><a href="/instructions/" target="_self" class="gnb_2da ">- 총학생회장단 인사</a></li>
+                        <li class="gnb_2dli"><a href="/instructions/depart/" target="_self" class="gnb_2da ">- 총학생회 조직도</a></li>
+                        <li class="gnb_2dli"><a href="/instructions/history/" target="_self" class="gnb_2da ">- 역대 총학생회</a></li>
+                        <!--<li class="gnb_2dli"><a href="/bbs/stu_department_edu.php" target="_self" class="gnb_2da inner-menu">- 교육정책국</a></li>-->
+                        <!--<li class="gnb_2dli"><a href="/bbs/stu_department_fin.php" target="_self" class="gnb_2da inner-menu">- 재정사무국</a></li>-->
+                        <!--<li class="gnb_2dli"><a href="/bbs/stu_department_cul.php" target="_self" class="gnb_2da inner-menu">- 문화기획국</a></li>-->
+                        <!--<li class="gnb_2dli"><a href="/bbs/stu_department_rig.php" target="_self" class="gnb_2da inner-menu">- 인권연대국</a></li>-->
+                        <!--<li class="gnb_2dli"><a href="/bbs/stu_department_com.php" target="_self" class="gnb_2da inner-menu">- 자치소통국</a></li>-->
+                        <!--<li class="gnb_2dli"><a href="/bbs/stu_department_wel.php" target="_self" class="gnb_2da inner-menu">- 주거복지국</a></li>-->
+                    </ul>
+                </li>
+                <li class="gnb_1dli" style="z-index:998">
+                    <a href="{% url 'excution:category_all' 'introduction' %}" target="_self" class="gnb_1da text-white">중앙집행위원회</a>
+                    <ul class="gnb_2dul">
+                        <li class="gnb_2dli"><a href="{% url 'excution:category_all' 'introduction' %}" target="_self" class="gnb_2da ">- 국별 소개</a></li>
+                        <li class="gnb_2dli"><a href="{% url 'excution:category_all' 'board' %}" target="_self" class="gnb_2da ">- 게시판</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_1dli" style="z-index:997">
+                    <a href="{% url 'operation:category_all' 'introduction' %}" target="_self" class="gnb_1da text-white">중앙운영위원회</a>
+                    <ul class="gnb_2dul">
+                        <li class="gnb_2dli"><a href="{% url 'operation:category_all' 'introduction' %}" target="_self" class="gnb_2da ">- 단위별 소개</a></li>
+                        <li class="gnb_2dli"><a href="{% url 'operation:category_all' 'board' %}" target="_self" class="gnb_2da ">- 게시판</a></li>
+                    </ul>
+                </li>
+                <li class="gnb_1dli" style="z-index:996">
+                    <a href="{% url 'informations:category_all' 'bylaw' %}" target="_self" class="gnb_1da text-white">자료실</a>
+                    <ul class="gnb_2dul">
+                        <li class="gnb_2dli"><a href="{% url 'informations:category_all' 'bylaw' %}" target="_blank" class="gnb_2da ">- 회칙</a></li>
+                        <li class="gnb_2dli"><a href="{% url 'informations:category_all' 'minutes' %}" target="_self" class="gnb_2da ">- 안건지/회의록</a></li>
+                    </ul>
+                </li>
+                <!--<li class="gnb_1dli" style="z-index:995">-->
+                    <!--<a href="/bbs/info_schedule.php" target="_self" class="gnb_1da text-white">편의정보</a>-->
+                    <!--<ul class="gnb_2dul">-->
+                        <!--<li class="gnb_2dli"><a href="/bbs/info_schedule.php" target="_self" class="gnb_2da ">학사일정</a></li>-->
+                        <!--<li class="gnb_2dli"><a href="/bbs/info_bus.php" target="_self" class="gnb_2da ">셔틀버스 노선 안내</a></li>-->
+                        <!--<li class="gnb_2dli"><a href="/bbs/info_campus.php" target="_self" class="gnb_2da ">캠퍼스맵</a></li>-->
+                        <!--<li class="gnb_2dli"><a href="http://koreastudent.kr/bbs/info_sitemap.php" target="_self" class="gnb_2da ">사이트맵</a></li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+            </ul>
+        </nav>
+    </div>
+  </div>
+  {% block contents %}
+  {% endblock %}
+  <footer id="footer">
+    <div class="container">
+        <div class="info">
+            <span>메일주소무단수집거부</span>
+        </div>
+        <p class="company">경북대학교 총학생회</p>
+        <div class="address">
+            <span>대구광역시 북구 산격3동(대학로80) 경북대학교 복지관 3층 총학생회실</span>
+            <span class="space">|</span>
+            <a href="tel:0539506961">Tel: 053-950-6961</a>
+            <span class="space">|</span>
+            <a href="mailto:knuch2019@gmail.com">Email: knuch2019@gmail.com</a>
+        </div>
+        <div class="copyright">
+            <span>copyright © 경북대학교 총학생회, All Rights Reserved</span>
+            <span class="space">|</span>
+            <span>제작: 경북대학교 IT대학 동아리 해달</span>
+            <span class="space">|</span>
+            <span>기획: 제 52대 총학생회 희열(조영광, 장유진), 최강민</span>
+            <span class="space">|</span>
+            <span>개발: 최강민, 김주원, 이준병, 신준철</span>
+        </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="{% static 'main/jquery.menu.mobile.js' %}"></script>
+</body>
+</html>

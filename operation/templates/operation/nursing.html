@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block title %}중앙운영위원회 | 간호대학{% endblock %}
+
+{% block contents %}
+    <div id="wrapper">
+        <div id="container">
+
+                <div class="side-menu">
+                    <p class="main-title">중앙운영위원회</p>
+                    <ul class="menu">
+                        <li>
+                            <a class=" " href="{% url 'operation:category_all' 'introduction' %}">단위별 소개</a>
+                        </li>
+                        <li><a class="inner-menu" href="/operation/introduction/sangju">-상주학생위원회</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/dongari">-총동아리연합회</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/humanities">-인문대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/socialsci">-사회과학대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/naturalsci">-자연과학대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/bizadm">-경상대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/engineering">-공과대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/IT">-IT대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/agriculture">-농업생명과학대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/arts">-예술대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/teachers">-사범대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/medicine">-의과대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/dentistry">-치과대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/vet">-수의과대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/humaneco">-생활과학대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/nursing">-간호대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/pharmacy">-약학대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/ecology">-생태환경대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/technology">-과학기술대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/publicadm">-행정학부</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/undecmajor">-자율전공부</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/globalleaders">-글로벌인재학부</a></li>
+                        <li>
+                            <a class=" " href="{% url 'operation:category_all' 'board' %}">게시판</a>
+                        </li>
+            </ul>
+                </div>
+
+
+                <div class="intro">
+                    <h2 id="container_title">간호대학 소개</h2>
+                    <span class="path">홈 > 중앙운영위원회 > 간호대학</span>
+                    {% load static %}
+                    <div class="content">
+                        <p class="sub-title" style="text-align: center;">
+                            <span style="font-size: 23px;">“Be Happy, 항상”</span>
+                        </p>
+                        <p><img src="{% static 'nurse.png' %}" style="width:20%;"></p>
+                        <p>
+                            <span stlye="font-size: 20px;">경북대학교 간호대학 비상대책위원회(이하 비대위)는 비대위원장, 부비대위원장을 겸임하고 있는 2인을 비롯한 국장단 5인, 차장단 7인의 간호대학생으로 구성되어 있습니다. 비대위는 학우들의 학업 증진과 편의를 위해 행사를 기획·진행의 역할을 수행합니다. 비대위는 2019학년도 간호대학 학생회를 대신하여 단과대학에 소속된 모든 학우들이 진리·긍지·봉사정신을 바탕으로 하여 인간의 존엄성에 가치를 둔 간호학에 전념할 수 있도록 노력하겠습니다. </span>
+                        </p>
+                        <p>
+                            <span stlye="font-size: 20px;">간호대 학우 모두가 꿈꾸는 경북대학교 간호대학이 되도록 저희 12명의 비대위는 항상 학우들의 이야기에 귀를 기울이고, 소통하고, 행동하겠습니다. 2019년 비록 비대위로 함께하는 1년이지만 학생회 못지않게 최선을 다하는 비대위가 되겠습니다. </span>
+                        </p>
+                            <p><img src="{% static 'nurse2.jpeg' %}" style="width:100%;"></p>
+                        <p class="name"><span><strong>2019학년 경북대학교 간호대학 비상대책위원회</strong></span></p>
+
+
+                </div>
+
+        </div>
+
+    </div>
+{% endblock %}

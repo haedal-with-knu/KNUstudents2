@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block title %}자료실 | {{ category }}{% endblock %}
+{% block contents %}
+<div id="wrapper">
+    <div id="container">
+        <div class="side-menu">
+            <p class="main-title">자료실</p>
+            <ul class="menu">
+                        <li><a class=" " href="{% url 'informations:category_all' 'bylaw' %}">회칙</a></li>
+                        <li><a class=" " href="{% url 'informations:category_all' 'minutes' %}">안건지/회의록</a></li>
+            </ul>
+        </div>
+        <div class="board-list">
+            <h2 id="container_title">{{ category }}<span class="sound_only"> 목록</span></h2>
+            <span class="path">홈 > 자료실 > {{category}}</span>
+
+            <div class="tbl_head01 tbl_wrap">
+            <table>
+            <caption> {{category}} 목록</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">번호</th>
+                        <th scope="col">제목</th>
+                        <th scope="col">글쓴이</th>
+                        <th scope="col">날짜</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for post in current_page %}
+                <tr class="">
+                    <td class="td_num">{{post.id}}</td>
+                    <td class="td_subject"><a href="{% url 'informations:post_detail' post.category post.id %}">{{post.title}}</a></td>
+                    <td class="td_name sv_use"><span class="sv_member">{{post.author}}</span></td>
+                    <td class="td_date">{{post.created|date:"m-d"}}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+            {% if is_paginated %}
+            <nav class="pg_wrap">
+                <span class="pg">
+                    <div class="bootstrap2">
+                        <div class="pagination">
+                            <ul>
+                                {% for page_num in current_page.paginator.page_range %}
+                                    {% ifequal page_num current_page.number %}
+                                    <li><a class = "cur_page"><span class="sound_only">열린</span>{{ page_num }}<span class="sound_only">페이지</span></a></li>
+                                    {% else %}
+                                    <li><a href="?page={{page_num}}">{{ page_num }}<span class="sound_only">페이지</span></a></li>
+                                    {% endifequal %}
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </span>
+            </nav>
+            {% endif %}
+
+
+
+
+
+
+    </div>
+</div>
+{% endblock %}

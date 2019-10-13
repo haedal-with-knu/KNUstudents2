@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% block title%} 경북대학교 총학생회 {% endblock %}
+{% block scrpt %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+{% endblock %}
+{% block extrahead %}
+<style>
+.carousel-indicators {
+    margin-right: auto;
+    margin-left: auto;
+}
+.carousel-indicators > li {
+  border-radius: 50%;
+  border: none;
+  width: 12px;
+  height: 12px;
+  margin : 0 4px;
+}
+.carousel-indicators .active {
+    margin:0 4px;
+}
+#wrapper.main > #container .catch-phrase .button-intro {
+    line-height:unset;
+}
+</style>
+{% endblock %}
+
+{% block contents %}
+{% load staticfiles %}
+ <div id="wrapper" class="main">
+        <div id="container" class="carousel slide" data-ride="carousel">
+            <div class="abs">
+                <ol class="carousel-indicators">
+                    <li data-target="#container" data-slide-to="0" class="active"></li>
+                    <li data-target="#container" data-slide-to="1"></li>
+                    <li data-target="#container" data-slide-to="2"></li>
+                </ol>
+            </div>
+
+            <div class="abs-block">
+                <div class="center-block catch-phrase">
+                    <p class="title">소통하는 HEAR<br>체감되는 HERE</p>
+                    <p class="sub-title">제52대 경북대학교 총학생회 희열</p>
+                    <a class="button-intro" href="./bbs/stu_introduction.php">총학생회 소개</a>
+                </div>
+            </div>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="http://www.antiwater.com/data/file/gal_02/2083649876_A8WfaV2u_B0E6BACFB4EBC7D0B1B3.jpg" width="100%"  alt="ex1">
+                </div>
+                <div class="item">
+                    <img src="https://images.homify.com/c_fill,f_auto,h_700,q_auto/v1439884844/p/photo/image/827587/%EA%B2%BD%EB%B6%81%EB%8C%80%EA%B3%B5%ED%95%99%EA%B4%80-09.jpg" width="100%" alt="ex2">
+                </div>
+                <div class="item">
+                    <img src="http://www.knun.net/data/photos/20170310/art_14893266061227_364e00.jpg" width="100%"  alt="ex2">
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="main-description-box">
+        <span class="main-desc-emphasis main-desc-title">(info 제목, ex:방학 중 재실 시간)</span>
+        <div class="main-desc-separator"></div>
+        <div class="main-desc-intro">(info, ex:재실 시간 이외에는 물품 대여 사업 관리 및 전화 응대를 진행하고 있지 않습니다)</div><br>
+        <span class="main-desc-emphasis">Tel</span>&nbsp;&nbsp;&nbsp;(희열 연결 전화번호)<br>
+        <span class="main-desc-emphasis">Email</span>&nbsp;&nbsp;&nbsp;(희열 이메일)<br>
+        <span class="main-desc-emphasis">Address</span>&nbsp;&nbsp;&nbsp;(희열 주소)<br>
+    </div>
+
+    <div class="main-quick-menu-box">
+        <div class="main-quick-menu-title">QUICK MENU</div>
+        <div class="main-quick-menu-col">
+            <a class="main-quick-icon icon01" href="#"></a>
+            <div class="quick-icon-title">퀵메뉴1</div>
+        </div>
+        <div class="main-quick-menu-col">
+            <a class="main-quick-icon icon02" href="#"></a>
+            <div class="quick-icon-title">퀵메뉴2</div>
+        </div>
+        <div class="main-quick-menu-col">
+            <a class="main-quick-icon icon03" href="#"></a>
+            <div class="quick-icon-title">퀵메뉴3</div>
+        </div>
+        <div class="main-quick-menu-col">
+            <a class="main-quick-icon icon04" href="#"></a>
+            <div class="quick-icon-title">퀵메뉴4</div>
+        </div>
+    </div>
+
+
+<hr>
+{% endblock %}
