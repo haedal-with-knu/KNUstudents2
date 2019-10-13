@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block title %}중앙운영위원회 | {{ post.category }} | {{ post.title }}{% endblock %}
+{% block contents %}
+<div id="wrapper">
+    <div id="container">
+        <div class="side-menu">
+            <p class="main-title">중앙운영위원회</p>
+            <ul class="menu">
+                        <li><a class=" " href="{% url 'operation:category_all' 'introduction' %}">단위별 소개</a></li>
+                        <li><a class=" " href="{% url 'operation:category_all' 'board' %}">게시판</a></li>
+            </ul>
+        </div>
+
+        <div class="board-view">
+    <h2 id="container_title">{{ cat }}<span class="sound_only"> 목록</span></h2>
+
+    <div class="tbl_frm01 tbl_wrap tbl-content">
+        <table>
+            <tbody>
+            <tr>
+                <th scope="row">제목</th>
+                <td colspan="5">{{ post.title }}</td>
+            </tr>
+            <tr>
+                <th>작성자</th>
+                <td><span class="sv_member">{{ post.author }}</span></td>
+                <th>작성일</th>
+                <td>{{post.created|date:"y-m-d h:i"}}</td>
+            </tr>
+            <tr>
+                <td colspan="6" class="td-content">
+                    <div id="bo_v_img">
+                    </div>
+                    <div id="bo_v_con">{{ post.text }}
+                        {% if post.photo %}
+                        <img src="{{post.photo.url}}" alt="post_image">
+                        {% endif %}
+                    </div>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+
+
+
+
+    </div>
+</div>
+{% endblock %}

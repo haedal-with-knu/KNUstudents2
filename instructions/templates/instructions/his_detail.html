@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %} | 경북대학교 총학생회{% endblock %}
+{% block contents %}
+<div id="wrapper">
+        <div id="container">
+            <div class="side-menu">
+                <p class="main-title">총학생회 소개</p>
+                <ul class="menu">
+                    <li><a class=" " href="/instructions/">총학생회장단 인사</a></li>
+                    <li><a class=" " href="/instructions/depart/">총학생회 조직도</a></li>
+                    <li><a class="current" href="#">역대 총학생회</a></li>
+                </ul>
+            </div>
+            <div class="board-view">
+                <h2 id="container_title">역대 총학생회<span class="sound_only"> 목록</span></h2>
+                <div class="tbl_frm01 tbl_wrap tbl-content">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <th scope="row">제목</th>
+                            <td colspan="5">{{ post.postname }}</td>
+                        </tr>
+                        <tr>
+                            <th>작성자</th>
+                            <td><span class="sv_member">{{ post.author }}</span></td>
+                            <th>작성일</th>
+                            <td>{{ post.updated|date:"y-m-d h:i" }}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6" class="td-content">
+                                <div id="bo_v_img">
+                                </div>
+                                <div id="bo_v_con">
+                                    {{ post.text }}
+                                    {% if post.photo %}
+                                    <img src="{{post.photo.url}}" alt="post_image">
+                                    {% endif %}
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+</div>
+{% endblock %}

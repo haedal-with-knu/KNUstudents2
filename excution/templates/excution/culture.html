@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block title %}중앙집행위원회 | {{ category }}{% endblock %}
+{% block contents %}
+<div id="wrapper">
+    <div id="container">
+        <div class="side-menu">
+            <p class="main-title">중앙집행위원회</p>
+            <ul class="menu">
+                        <li><a class=" " href="{% url 'excution:category_all' 'introduction' %}">국별 소개</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/culture/">-문화기획국</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/publicity/">-홍보소통국</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/welfare/">-복지체감국</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/support/">-운영지원팀</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/rights/">-학생권익국</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/finance/">-재정사무국</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/cooperation/">-대외협력국</a></li>
+                        <li><a class=" " href="{% url 'excution:category_all' 'board' %}">게시판</a></li>
+            </ul>
+        </div>
+        <div class="intro">
+                <h2 id="container_title">문화기획국 소개</h2>
+                <span class="path">홈 > 중앙집행위원회 > 문화기획국</span>
+                {% load static %}
+                <div class="content">
+                    <p class="sub-title" style="text-align: center;">
+                        <span style="font-size: 23px;">문 화 기 획 국</span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;"><br><br><br><strong>여러분들은 어떤 대학 생활을 꿈꿔왔나요? 또, 어떤 대학 생활을 보내고 계시나요?</strong> </span>
+                    </p>
+                        <p>
+                        <span stlye="font-size: 20px;">치열한 입시 끝에 경북대학교에 오신 여러분은 모두 캠퍼스 낭만을 하나쯤 가지고 있을 것입니다. 하지만 학점 관리, 빠듯한 생활비, 취업 준비와 스펙 쌓기 등 현실적인 문제들에 부딪혀 즐겁지만은 않은 대학 생활을 보내고 계신 학우분들이 많습니다. 그런 여러분들의 고된 대학 생활에 즐거움과 활력을 주고, 여러 스트레스를 해소할 수 있도록 대학 문화를 조성하는 것이 저희 '문화기획국'의 목표입니다.</span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;">즐거운 대학 생활을 위한 행사 진행에 있어 기획만큼 중요한 것이 학우 여러분들의 참여입니다. 아무리 좋은 기획이라도 참여가 없다면 아무 의미가 없습니다. 저희 문화기획국은 누구보다도 여러분들의 목소리에 귀 기울이겠습니다. 진심 어린 충고와 조언 모두 달게 받아들여 학우분들이 원하는, 진정으로 참여하고 싶은 대학 문화를 만들겠습니다. 짜여진 프로그램에 수동적으로 따라가기만 하는 행사가 아닌, <strong>학우 여러분들이 직접 참여하여 함께 만들어 갈 수 있는 대학 문화를 조성하겠습니다.</strong></span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;">그를 위해 저희 문화기획국은 브랜딩화를 통한 개성 있고 재밌는 대동제, 우리 학교의 마스코트인 호반우의 교체, 다양한 경북대학교 굿즈 제작, 부산대학교와의 E-sports 대회 등 풍요로운 문화 컨텐츠를 진행합니다. 학내뿐 아니라 타 대학과의 문화 교류에까지 관심을 가지고 문화의 장을 넓히는 데에 힘쓰겠습니다.</span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;">한 번뿐인 청춘, 대학생이라면 누구나 누려야 할 문화생활들이 더 이상 사치라는 생각이 들지 않도록, <strong>유익하고 다양한 '문화' 생활의 '기회'를 제공하는 '문화기획국'이 되겠습니다.</strong></span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;">2019년을 희열로 가득히, “HERE” 여기서, “HEAR” 당신의 목소리를 듣습니다.</span>
+                    </p>
+                    <p class="names"><span>국장 : 공과대학 기계공학부 김별림<br>부국장 : 경상대학 경영학부 구남현<br>국원 : 공과대학 환경공학과 김현수<br>국원 : IT대학 컴퓨터학부 박서현<br>국원 : 자연과학대학 화학과 이상완</span></p>
+            </div>
+
+        </div>
+</div>
+{% endblock %}

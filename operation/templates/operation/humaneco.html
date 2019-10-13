@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block title %}중앙운영위원회 | 생활과학대학{% endblock %}
+
+{% block contents %}
+    <div id="wrapper">
+        <div id="container">
+
+                <div class="side-menu">
+                    <p class="main-title">중앙운영위원회</p>
+                    <ul class="menu">
+                        <li>
+                            <a class=" " href="{% url 'operation:category_all' 'introduction' %}">단위별 소개</a>
+                        </li>
+                        <li><a class="inner-menu" href="/operation/introduction/sangju">-상주학생위원회</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/dongari">-총동아리연합회</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/humanities">-인문대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/socialsci">-사회과학대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/naturalsci">-자연과학대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/bizadm">-경상대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/engineering">-공과대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/IT">-IT대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/agriculture">-농업생명과학대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/arts">-예술대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/teachers">-사범대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/medicine">-의과대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/dentistry">-치과대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/vet">-수의과대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/humaneco">-생활과학대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/nursing">-간호대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/pharmacy">-약학대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/ecology">-생태환경대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/technology">-과학기술대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/publicadm">-행정학부</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/undecmajor">-자율전공부</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/globalleaders">-글로벌인재학부</a></li>
+                        <li>
+                            <a class=" " href="{% url 'operation:category_all' 'board' %}">게시판</a>
+                        </li>
+            </ul>
+                </div>
+
+
+                <div class="intro">
+                    <h2 id="container_title">생활과학대학 소개</h2>
+                    <span class="path">홈 > 중앙운영위원회 > 생활과학대학</span>
+                    {% load static %}
+                    <div class="content">
+                        <p class="sub-title" style="text-align: center;">
+                            <span style="font-size: 23px;">생활과학대학 학생회 씨리얼</span>
+                        </p>
+                        <p><img src="{% static 'lifesci3.jpg' %}" style="width:40%;"></p>
+                        <p>
+                            <span stlye="font-size: 20px;">경북대학교 생활과학대학 학생회는 경북대학교 생활과학대학 학생들로 구성되어 있습니다.[씨리얼]은 생활과학대학의 27대 학생회로 씨리얼의 다양한 재료들이 모여 한 그릇을 만들어 나가듯 다양한 학생분들을 아울러 생활과학대학만의 학생문화를 만들어가겠다는 포부와 학생 사회를 진실되게 바라보고 이끌어가겠다(See real)는 다짐이 담겨있는 이름입니다. 학생들의 복지와 편의를 위해 준비하고, 학업과 더불어 다양한 행사를 통해 즐겁고 재미있는 대학생활 속에서 여러 가지를 경험할 수 있도록 운영하고 있습니다.</span>
+                        </p>
+                        <p>
+                            <span stlye="font-size: 20px;">2019년 생활과학대학 학생회 씨리얼은 학생들을 위한 경북대학교 생활과학대학이 될 수 있도록 학생들의 소리를 귀 기울여 듣고 행동으로 실천하는 학생회가 되겠습니다.</span>
+                        </p>
+                        <p>
+                            <span stlye="font-size: 20px;"><a href="https://facebook.com/knuhumanecology">생과대 페이스북 바로가기</a></span>
+                        </p>
+                        <p><img src="{% static 'lifesci2.jpg' %}" style="width:100%;"></p>
+                        <p class="name"><span><strong>2019학년 경북대학교 간호대학 비상대책위원회</strong></span></p>
+
+
+                </div>
+
+        </div>
+
+    </div>
+{% endblock %}

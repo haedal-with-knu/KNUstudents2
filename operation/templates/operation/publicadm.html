@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% block title %}중앙운영위원회 | 행정학부{% endblock %}
+
+{% block contents %}
+    <div id="wrapper">
+        <div id="container">
+
+                <div class="side-menu">
+                    <p class="main-title">중앙운영위원회</p>
+                    <ul class="menu">
+                        <li>
+                            <a class=" " href="{% url 'operation:category_all' 'introduction' %}">단위별 소개</a>
+                        </li>
+                        <li><a class="inner-menu" href="/operation/introduction/sangju">-상주학생위원회</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/dongari">-총동아리연합회</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/humanities">-인문대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/socialsci">-사회과학대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/naturalsci">-자연과학대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/bizadm">-경상대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/engineering">-공과대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/IT">-IT대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/agriculture">-농업생명과학대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/arts">-예술대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/teachers">-사범대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/medicine">-의과대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/dentistry">-치과대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/vet">-수의과대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/humaneco">-생활과학대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/nursing">-간호대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/pharmacy">-약학대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/ecology">-생태환경대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/technology">-과학기술대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/publicadm">-행정학부</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/undecmajor">-자율전공부</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/globalleaders">-글로벌인재학부</a></li>
+                        <li>
+                            <a class=" " href="{% url 'operation:category_all' 'board' %}">게시판</a>
+                        </li>
+            </ul>
+                </div>
+
+
+                <div class="intro">
+                    <h2 id="container_title">행정학부 소개</h2>
+                    <span class="path">홈 > 중앙운영위원회 > 행정학부</span>
+                    {% load static %}
+                    <div class="content">
+                        <p class="sub-title" style="text-align: center;">
+                            <span style="font-size: 23px;">[행정학부 PARTY학생회]</span>
+                        </p>
+                        <p>
+                            <span stlye="font-size: 20px;">경북대학교 행정학부는 자타가 공인하는 민족 경북대학교 최고의 학부입니다. 이에 상응하여, 행정학부 학생회는 자주적이고 민주적인 의사결정 기구로서 학생자치활동을 통하여 행정학부 학우간의 단결력을 강화하고 권익을 도모하며, 자유로운 학문연구와 건전한 대학생활 건설을 위해 많은 노력을 합니다.</span>
+                        </p>
+                        <p>
+                            <span stlye="font-size: 20px;">우리 행정학부 학생회는 모든 행정학부 학우가 행정학부라는 공동체 아래 서로 가족같이 생각하고 즐거운 대학생활을 즐길 수 있도록 열심히 일하고 있습니다. 또한, 학생회 간부들은 학생회라는 막중한 임무와 지지해주시는 학우 분들의 정성에 보답하고자 열심히 일하고 있습니다. 하루하루 학우 여러분을 위해 일할 수 있음에 기쁨을 느끼고 있으며, 더 나은 학생회가 될 수 있도록 노력하겠습니다. </span>
+                        </p>
+                         <p>
+                            <span stlye="font-size: 20px;"><strong>P</strong>ublic Administration</span>
+                        </p>
+                         <p>
+                            <span stlye="font-size: 20px;"><strong>A</strong>nd we</span>
+                        </p>
+                         <p>
+                            <span stlye="font-size: 20px;"><strong>R</strong> next</span>
+                        </p>
+                         <p>
+                            <span stlye="font-size: 20px;"><strong>T</strong>o</span>
+                        </p>
+                         <p>
+                            <span stlye="font-size: 20px;"><strong>Y</strong>ou</span>
+                        </p>
+
+                        <p class="name"><span><strong>경북대학교 행정학부 제 29대 PARTY 학생회</strong></span></p>
+
+
+                </div>
+
+        </div>
+
+    </div>
+{% endblock %}

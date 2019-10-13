@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block title %}중앙집행위원회 | {{ category }}{% endblock %}
+{% block contents %}
+<div id="wrapper">
+    <div id="container">
+        <div class="side-menu">
+            <p class="main-title">중앙집행위원회</p>
+            <ul class="menu">
+                        <li><a class=" " href="{% url 'excution:category_all' 'introduction' %}">국별 소개</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/culture/">-문화기획국</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/publicity/">-홍보소통국</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/welfare/">-복지체감국</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/support/">-운영지원팀</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/rights/">-학생권익국</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/finance/">-재정사무국</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/cooperation/">-대외협력국</a></li>
+                        <li><a class=" " href="{% url 'excution:category_all' 'board' %}">게시판</a></li>
+            </ul>
+        </div>
+        <div class="intro">
+                <h2 id="container_title">대외협력국 소개</h2>
+                <span class="path">홈 > 중앙집행위원회 > 대외협력국</span>
+                {% load static %}
+                <div class="content">
+                    <p class="sub-title" style="text-align: center;">
+                        <span style="font-size: 23px;">대 외 협 력 국</span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;"><br><br><br><strong>학우 여러분, 경북대라는 단어를 들으면 어떤 이미지가 떠오르십니까?</strong> <br>또 세상이 경북대를 바라볼 때 어떤 이미지를 떠올리길 바라십니까? </span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;">우리 스스로가 바라보고 느끼는 경북대가 있고, 세상이 바라보고 느끼는 경북대가 있습니다. 그리고 진정한 학교의 위상은 이 두 가지가 함께 발전할 때 높아집니다. </span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;">경북대학교 제52대 총학생회 대외협력국은 우리가 바라보는 경북대를 변화시켜나감과 동시에 세상이 바라보는 경북대의 이미지에도 소홀히 하지 않을 것을 약속드립니다. </span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;">대외협력국에서는 경북대학교의 좋은 이미지를 외부로 알리고 협력하여 학교의 명성을 드높이도록 노력합니다. 경북대의 이름으로 많은 단체와 협력하는 만큼 어떤 단체를 만나든지 <strong>우리가 경북대 학생의 이미지를 만든다는 마음으로 책임감 있고 신중하게 행동하겠습니다. </strong></span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;">또한, 경북대 학생들을 대표하여 외부업체와의 제휴를 맺어 경북대 학생들만 받을 수 있는 혜택을 만들어가고, 외부 명사를 초청하는 자리를 만들어 학우 여러분들의 자기계발 등 학생들의 권익을 위해서 여러 분야에서 사회와 협력하여 경북대학교가 여러분들을 위한 대학이라는 인식을 심어줄 수 있도록 노력하겠습니다. </span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;">대외협력국은 우리의 움직임이 경북대학교 학우들의 목소리를 대표하고 경북대의 이미지를 만든다는 생각으로 책임감 있게 행동하며, <strong>열심히 발로 뛰어 여러분들이 희망하는 경북대학교의 모습으로 만들어 가겠습니다.</strong></span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;">2019년을 희열로 가득히, “HERE” 여기서, “HEAR” 당신의 목소리를 듣습니다.</span>
+                    </p>
+                    <p class="names"><span>국장 : 공과대학 신소재공학부 정경훈<br>부국장 : 생활과학대학 의류학과 옥유지<br>국원 : 자연과학대학 생명공학부 함영욱<br>국원 : 경상대학 경제통상학부 은지윤<br>국원 : 농업생명과학대학 응용생명과학부 최봉경</span></p>
+            </div>
+
+        </div>
+</div>
+{% endblock %}

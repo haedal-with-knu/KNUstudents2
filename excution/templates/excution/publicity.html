@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block title %}중앙집행위원회 | {{ category }}{% endblock %}
+{% block contents %}
+<div id="wrapper">
+    <div id="container">
+        <div class="side-menu">
+            <p class="main-title">중앙집행위원회</p>
+            <ul class="menu">
+                        <li><a class=" " href="{% url 'excution:category_all' 'introduction' %}">국별 소개</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/culture/">-문화기획국</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/publicity/">-홍보소통국</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/welfare/">-복지체감국</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/support/">-운영지원팀</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/rights/">-학생권익국</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/finance/">-재정사무국</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/cooperation/">-대외협력국</a></li>
+                        <li><a class=" " href="{% url 'excution:category_all' 'board' %}">게시판</a></li>
+            </ul>
+        </div>
+        <div class="intro">
+                <h2 id="container_title">홍보소통국 소개</h2>
+                <span class="path">홈 > 중앙집행위원회 > 홍보소통국</span>
+                {% load static %}
+                <div class="content">
+                    <p class="sub-title" style="text-align: center;">
+                        <span style="font-size: 23px;">홍 보 소 통 국</span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;"><br><br><br><strong>여러분은 경북대학교를 얼마나 알고 있나요?</strong> <br>여러분은 지금 학교에서 어떤 일이 일어나고 있는지, 정말로 알고 있나요?</span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;"><strong>우리가 이 학교의 진정한 주인이 되기 위해서는 우선, 알아야 합니다.</strong></span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;">내가 매일 오고가는 이 교정에서 대체 무슨 일이 일어나는지, 그 속에서 내가 할 수 있는 일은 무엇인지에 대해 말입니다. 하루에도 천문학적인 양의 정보가 쏟아지는 요즘, 내가 원하는 정보를 찾고 활용하기란 매우 어렵습니다. 저희는 이러한 상황에 대해 불편함과 어려움을 깊이 공감했습니다.</span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;">하지만 지난 2018년, 학생들의 눈과 귀가 되어주어야 할 총학생회의 부재로 학생들의 알 권리는 충족되지 못하였고, 학생들의 목소리는 제대로 전달되지 못했습니다. </span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;">이에 저희 경북대학교 제52대 총학생회 홍보소통국은 이제 진정으로 여러분들을 위한 홍보와 소통에 힘써 여러분이 경북대학교 학우로서 꼭 필요하고 알아야 할 정보를 전달하여 그 변화를 체감하실 수 있도록 하겠습니다.</span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;">또한, “소통”이라는 단어가 사전적 의미로 ‘뜻이 서로 통하여 오해가 없음’인 만큼 늘 당신의 옆에서 동행하며, 양방향의 열린 소통을 지향하며 원활한 의사소통을 위해 앞장서겠습니다.</span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px; "><strong>학부생을 향한 따뜻한 손길, 학부생의 속삼임을 듣는 귀, 학교를 향한 우렁찬 소리, 우리 모두를 위한 밝은 햇살이 되고자 하는 저희는 “홍보소통국”입니다.</strong></span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;">2019년을 희열로 가득히, “HERE” 여기서, “HEAR” 당신의 목소리를 듣습니다.</span>
+                    </p>
+                    <p class="names"><span>국장 : 생활과학대학 의류학과 이선민<br>부국장 : 농업생명과학대학 응용생명과학부 우창완<br>국원 : 인문대학 한문학과 윤민주</span></p>
+            </div>
+
+        </div>
+</div>
+{% endblock %}

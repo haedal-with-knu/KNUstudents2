@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block title %}중앙집행위원회 | {{ category }}{% endblock %}
+{% block contents %}
+<div id="wrapper">
+    <div id="container">
+        <div class="side-menu">
+            <p class="main-title">중앙집행위원회</p>
+            <ul class="menu">
+                        <li><a class=" " href="{% url 'excution:category_all' 'introduction' %}">국별 소개</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/culture/">-문화기획국</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/publicity/">-홍보소통국</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/welfare/">-복지체감국</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/support/">-운영지원팀</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/rights/">-학생권익국</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/finance/">-재정사무국</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/cooperation/">-대외협력국</a></li>
+                        <li><a class=" " href="{% url 'excution:category_all' 'board' %}">게시판</a></li>
+            </ul>
+        </div>
+        <div class="intro">
+                <h2 id="container_title">재정사무국 소개</h2>
+                <span class="path">홈 > 중앙집행위원회 > 재정사무국</span>
+                {% load static %}
+                <div class="content">
+                    <p class="sub-title" style="text-align: center;">
+                        <span style="font-size: 23px;">재 정 사 무 국</span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;"><br><br><br><strong>여러분들은 총학생회 재정사용에 대해 어떻게 생각하시는지요?</strong> </span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;">만약 부정적인 생각이 먼저 떠오른다면 이는 지금까지 전대의 총학생회들이 쌓은 이미지와 인식에 대한 결과라고 생각합니다. 이러한 여러분들의 생각을 겸허히 받아들이며, 저희 제52대 재정사무국은 가장 시급하게 개선해야 할 부분이 총학생회와 학생사이에는 신뢰의 회복이라고 생각합니다. 이 모든 신뢰를 위해서는 무엇보다도 재정사무국의 투명하고 깨끗한 재정 운용과 기록에서 비롯된다고 생각합니다.</span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;"><strong>경북대학교 학생이라면 내가 낸 총학생회비가 어디에 어떻게 지출되었는지, 지출되고 난 다음 기록은 누가 어떻게 관리하는지 알 권리가 있습니다.</strong> 재정사무국에서는 각종 예·결산을 작성할 뿐 아니라 각종 자료 수합 및 공개를 담당하고 있습니다. 이렇게 가장 기본이자 제일 중요하게 다뤄지는 투명한 재정 관리를 하여 학우 여러분들과 두터운 신뢰를 쌓고자 합니다. </span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;">이 뿐 아니라 재정사무국은 여러 국에서 기획하고 진행하는 업무에 대한 재정적 감사 및 기록과 함께 경북대학교 총학생회 공문 회신 및 관리, 중앙운영위원회 회의록 관리 담당등 전반적인 업무에 최선을 다하고 있습니다.</span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;">제52대 경북대학교 총학생회 '희열'에게 많은 기대를 가지고 있으시라 생각됩니다. 기대를 신뢰로 바꾸기 위해 <Strong>재정사무국은 제일 먼저 투명한 재정관리를 약속드리며, 그 누구보다 철저하고 꼼꼼하게 행동하겠습니다.</Strong> <br> 감사합니다.</span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;">2019년을 희열로 가득히, “HERE” 여기서, “HEAR” 당신의 목소리를 듣습니다.</span>
+                    </p>
+                    <p class="names"><span>국장 : IT대학 전자공학부 박지환<br>부국장 : IT대학 컴퓨터학부 김형진<br>국원 : 경상대학 경제통상학부 이정언<br>국원 : IT대학 컴퓨터학부 장유진</span></p>
+            </div>
+
+        </div>
+</div>
+{% endblock %}

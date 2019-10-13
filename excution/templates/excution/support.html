@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block title %}중앙집행위원회 | {{ category }}{% endblock %}
+{% block contents %}
+<div id="wrapper">
+    <div id="container">
+        <div class="side-menu">
+            <p class="main-title">중앙집행위원회</p>
+            <ul class="menu">
+                        <li><a class=" " href="{% url 'excution:category_all' 'introduction' %}">국별 소개</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/culture/">-문화기획국</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/publicity/">-홍보소통국</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/welfare/">-복지체감국</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/support/">-운영지원팀</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/rights/">-학생권익국</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/finance/">-재정사무국</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/cooperation/">-대외협력국</a></li>
+                        <li><a class=" " href="{% url 'excution:category_all' 'board' %}">게시판</a></li>
+            </ul>
+        </div>
+        <div class="intro">
+                <h2 id="container_title">운영지원팀 소개</h2>
+                <span class="path">홈 > 중앙집행위원회 > 운영지원팀</span>
+                {% load static %}
+                <div class="content">
+                    <p class="sub-title" style="text-align: center;">
+                        <span style="font-size: 23px;">운 영 지 원 팀</span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;"><br><br><br><strong>학우 여러분, ‘support’라는 단어를 보시면 어떤 생각이 드십니까?</strong> </span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;">‘support’는 ‘지원하다’, ‘뒷받침하다’ 라는 뜻을 가지고 있습니다. 주를 이룸을 뜻하는 ‘main’의 옆에는<br><strong>‘support’라는 주목을 받지는 못하지만 뒤에서 누락되는 점을 방지, 실무를 뛰는 역할이 필요합니다.</strong></span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;">경북대학교 제52대 총학생회 운영지원팀은 회장단과 중앙집행위원회(희열 총학생회)가 진행하는 전반적인 사업과 행사의 진행과 운영을 비롯한 전반적인 분야에서 뒤에서 받쳐주고 지원하고 있습니다.  </span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;">운영지원팀은 다른 국들과는 다르게 주어진 공약들이 없습니다. </span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;">하지만 운영지원팀은 경북대학교 중앙집행위원회가 항상 원활하게 움직일 수 있도록 그 어떤 사업과 상황에도 뛰어듭니다. 중앙집행위원회는 학우분들을 위하여 대동제, 전교학생대표자회의, 중앙운영위원회 회의를 비롯하여 많은 업무를 진행하고, 여기서 운영지원팀은 회장단, 중앙집행위원회의 행사 진행에서 손과 발이 될 수 있도록 부지런하게 행동하겠습니다. </span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;">저희 운영지원팀은 모든 국들을 도와서 열심히 직접 발로 뛰어 땀과 노력으로 학우 여러분들이 원하는 경북대학교로 만들어 가겠습니다.</span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;">저희 운영지원팀은 모두의 주목 아래서 주목 받지는 않지만, <strong>학우 여러분들을 위한다는 신념 하나만으로 묵묵히, 그리고 꿋꿋하게 일하겠습니다.</strong></span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;">2019년을 희열로 가득히, “HERE” 여기서, “HEAR” 당신의 목소리를 듣습니다.</span>
+                    </p>
+                    <p class="names"><span>팀장 : 인문대학 독어독문학과 전문배<br>팀원 : 인문대학 국어국문학과 김희진<br>팀원 : 인문대학 사학과 정경섭</span></p>
+
+
+            </div>
+
+        </div>
+</div>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block title %}중앙집행위원회 | {{ category }}{% endblock %}
+{% block contents %}
+<div id="wrapper">
+    <div id="container">
+        <div class="side-menu">
+            <p class="main-title">중앙집행위원회</p>
+            <ul class="menu">
+                        <li><a class=" " href="{% url 'excution:category_all' 'introduction' %}">국별 소개</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/culture/">-문화기획국</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/publicity/">-홍보소통국</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/welfare/">-복지체감국</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/support/">-운영지원팀</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/rights/">-학생권익국</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/finance/">-재정사무국</a></li>
+                        <li><a class="inner-menu" href="/excution/introduction/cooperation/">-대외협력국</a></li>
+                        <li><a class=" " href="{% url 'excution:category_all' 'board' %}">게시판</a></li>
+            </ul>
+        </div>
+        <div class="intro">
+                <h2 id="container_title">학생권익국 소개</h2>
+                <span class="path">홈 > 중앙집행위원회 > 학생권익국</span>
+                {% load static %}
+                <div class="content">
+                    <p class="sub-title" style="text-align: center;">
+                        <span style="font-size: 23px;">학 생 권 익 국</span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;"><br><br><br><strong>“지난 수세기 동안, 오늘날 우리가 기본적 권리라 일컫는 것들은 존중받지 못했다.”</strong></span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;">신분, 인종, 성별에 따른 차별은 지역을 막론하고 존재했고 그로 인해 사회적 약자는 고통을 받을 수밖에 없었다. 그러나 그들은 현실에 안주하지 않고 자신들의 권익을 보장받기 위해 온 힘을 다해 투쟁했고 공동체는 이에 공감하여 함께 연대함으로 지금의 평등과 자유를 쟁취하며 마침내 승리하였다.</span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;">학생의 권리도 마찬가지다. 학생은 학교의 주인이지만, 학생의 목소리는 학교에게는 소리 없는 아우성에 지나지 않았다. 학생들의 교육권과 인권에 대한 침해는 지속되었다. 그러나 우리는 굴복하지 않았다. 계속해서 목소리를 높였고 투쟁의 역사를 지속해왔다.</span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;">우리가 침해받는 권리는 교내에 국한되지 않는다. 학생들은 감당할 수 없을 정도로 살인적인 등록금과 실업률, 부당한 아르바이트 대우, 원룸 주인들의 갑질 등의 문제로 우리 사회에서 약자로 살아간다. 이러한 상황에서 우리는 어떻게 살아나가야 하는가?</span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;"><strong>학생권익국은 우리의 목소리가 널리 퍼질 수 있도록 함께할 것이다.</strong><br>우리는 이 사회의 부당한 대우와 우리가 침해받은 권리에 대해 반드시 소리를 낼 것이다. 모두가 자신의 권리를 보장받을 수 있도록 우리는 더욱 더 목소리를 높일 것이다.</span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;"><strong>“우리의 권리는 우리가 직접 쟁취한다.”</strong></span>
+                    </p>
+                    <p>
+                        <span stlye="font-size: 20px;">2019년을 희열로 가득히, “HERE” 여기서, “HEAR” 당신의 목소리를 듣습니다.</span>
+                    </p>
+                    <p class="names"><span>국장 : 행정학부 국동현<br>부국장 : 경상대학 경영학부 도경록<br>국원 : 경상대학 경영학부 정원영<br>국원 : 공과대학 신소재공학부 강하빈<br>국원 : 생활과학대학 의류학과 박소현</span></p>
+            </div>
+
+        </div>
+</div>
+{% endblock %}

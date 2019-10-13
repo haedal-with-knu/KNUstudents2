@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block title %}중앙운영위원회 | 경상대학{% endblock %}
+
+{% block contents %}
+    <div id="wrapper">
+        <div id="container">
+
+                <div class="side-menu">
+                    <p class="main-title">중앙운영위원회</p>
+                    <ul class="menu">
+                        <li>
+                            <a class=" " href="{% url 'operation:category_all' 'introduction' %}">단위별 소개</a>
+                        </li>
+                        <li><a class="inner-menu" href="/operation/introduction/sangju">-상주학생위원회</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/dongari">-총동아리연합회</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/humanities">-인문대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/socialsci">-사회과학대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/naturalsci">-자연과학대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/bizadm">-경상대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/engineering">-공과대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/IT">-IT대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/agriculture">-농업생명과학대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/arts">-예술대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/teachers">-사범대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/medicine">-의과대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/dentistry">-치과대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/vet">-수의과대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/humaneco">-생활과학대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/nursing">-간호대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/pharmacy">-약학대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/ecology">-생태환경대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/technology">-과학기술대학</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/publicadm">-행정학부</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/undecmajor">-자율전공부</a></li>
+                        <li><a class="inner-menu" href="/operation/introduction/globalleaders">-글로벌인재학부</a></li>
+                        <li>
+                            <a class=" " href="{% url 'operation:category_all' 'board' %}">게시판</a>
+                        </li>
+            </ul>
+                </div>
+
+
+                <div class="intro">
+                    <h2 id="container_title">경상대학 소개</h2>
+                    <span class="path">홈 > 중앙운영위원회 > 경상대학</span>
+                    {% load static %}
+                    <div class="content">
+                        <p>
+                            <span stlye="font-size: 20px;">2019학년도 경북대학교 경상대학 학생회는 비상대책위원회 체제입니다. 경상대학 학생회장이 궐위인 상황이며 학생회의 권한을 대행하기 위해 조직한 임시 기구입니다.</span>
+                        </p>
+                        <p>
+                            <span stlye="font-size: 20px;">제 29대 비상대책위원회는 본회가 규정하는 정식기구인 학생회장 및 부학생회장직의 복원을 목적으로 하고 있습니다. 또한 현 비상대책위원회는 새내기모꼬지, 가을축제 등 경상대학이 주체한 행사를 대행함에 있어 학우분들의 불편함을 해소하기위해 최선을 다하겠습니다.</span>
+                        </p>
+                        <p>
+                            <span stlye="font-size: 20px;"><a href=https://www.facebook.com/558137077623098">경상대학 페이스북 바로가기</a></span>
+                        </p>
+                        <p class="name"><span><strong>2019학년 경북대학교 경상대학 비상대책위원회</strong></span></p>
+
+
+                </div>
+
+        </div>
+
+    </div>
+{% endblock %}

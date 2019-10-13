@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title %}역대 총학생회 | 경북대학교 총학생회{% endblock %}
+
+{% block contents %}
+    <div id="wrapper">
+        <div id="container">
+            <div class="side-menu">
+                <p class="main-title">총학생회 소개</p>
+                <ul class="menu">
+                    <li><a class=" " href="/instructions/">총학생회장단 인사</a></li>
+                    <li><a class=" " href="/instructions/depart/">총학생회 조직도</a></li>
+                    <li><a class="current" href="#">역대 총학생회</a></li>
+                </ul>
+            </div>
+
+            <div class="board-list">
+                <h2 id="container_title">역대 총학생회<span class="sound_only"> 목록</span></h2>
+                <span class="path">홈 > 총학생회 소개 > 역대 총학생회</span>
+
+                    <div class="tbl_head01 tbl_wrap">
+                        <table>
+                            <caption>역대 총학생회 목록</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">번호</th>
+                                    <th scope="col">제목</th>
+                                    <th scope="col">글쓴이</th>
+                                    <th scope="col">날짜</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for a in object_list %}
+                                    <tr class="">
+                                        <td class="td_num">{{a.id}}</td>
+                                        <td class="td_subject"><a href="{% url 'instructions:his_detail' a.id %}">{{a.postname}}</a></td>
+                                        <td class="td_name sv_use"><span class="sv_member">{{a.author}}</span></td>
+                                        <td class="td_date">{{a.updated|date:"y-m-d"}}</a></td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <nav class="pg_wrap">
+                        <span class="pg">
+                            <div class="bootstrap2">
+                                <div class="pagination">
+                                    <ul class="pagination justify-content-center pagination-sm">
+                                        {% for object in page_obj.paginator.page_range %}
+                                            {% if page_obj.number == forloop.counter %}
+                                            <li><a class = "cur_page"><span class="sound_only">열린</span>{{ forloop.counter }}<span class="sound_only">페이지</span></a></li>
+                                            {% else %}
+                                            <li><a class="page-link" href="{{request.path}}?page={{forloop.counter}}">{{forloop.counter}}</a></li>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </span>
+                    </nav>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
