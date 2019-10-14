@@ -6,50 +6,65 @@
         <div class="side-menu">
             <p class="main-title">중앙운영위원회</p>
             <ul class="menu">
-                        <li><a class=" " href="{% url 'operation:category_all' 'introduction' %}">단위별 소개</a></li>
-                        <li><a class=" " href="{% url 'operation:category_all' 'board' %}">게시판</a></li>
+                <li><a class=" " href="{% url 'operation:category_all' 'introduction' %}">단위별 소개</a></li>
+                <li><a class="inner-menu" href="/operation/introduction/sangju">-상주학생위원회</a></li>
+                <li><a class="inner-menu" href="/operation/introduction/dongari">-총동아리연합회</a></li>
+                <li><a class="inner-menu" href="/operation/introduction/humanities">-인문대학</a></li>
+                <li><a class="inner-menu" href="/operation/introduction/socialsci">-사회과학대학</a></li>
+                <li><a class="inner-menu" href="/operation/introduction/naturalsci">-자연과학대학</a></li>
+                <li><a class="inner-menu" href="/operation/introduction/bizadm">-경상대학</a></li>
+                <li><a class="inner-menu" href="/operation/introduction/engineering">-공과대학</a></li>
+                <li><a class="inner-menu" href="/operation/introduction/IT">-IT대학</a></li>
+                <li><a class="inner-menu" href="/operation/introduction/agriculture">-농업생명과학대학</a></li>
+                <li><a class="inner-menu" href="/operation/introduction/arts">-예술대학</a></li>
+                <li><a class="inner-menu" href="/operation/introduction/teachers">-사범대학</a></li>
+                <li><a class="inner-menu" href="/operation/introduction/medicine">-의과대학</a></li>
+                <li><a class="inner-menu" href="/operation/introduction/dentistry">-치과대학</a></li>
+                <li><a class="inner-menu" href="/operation/introduction/vet">-수의과대학</a></li>
+                <li><a class="inner-menu" href="/operation/introduction/humaneco">-생활과학대학</a></li>
+                <li><a class="inner-menu" href="/operation/introduction/nursing">-간호대학</a></li>
+                <li><a class="inner-menu" href="/operation/introduction/pharmacy">-약학대학</a></li>
+                <li><a class="inner-menu" href="/operation/introduction/ecology">-생태환경대학</a></li>
+                <li><a class="inner-menu" href="/operation/introduction/technology">-과학기술대학</a></li>
+                <li><a class="inner-menu" href="/operation/introduction/publicadm">-행정학부</a></li>
+                <li><a class="inner-menu" href="/operation/introduction/undecmajor">-자율전공부</a></li>
+                <li><a class="inner-menu" href="/operation/introduction/globalleaders">-글로벌인재학부</a></li>
+                <li><a class=" " href="{% url 'operation:category_all' 'board' %}">게시판</a></li>
             </ul>
         </div>
 
         <div class="board-view">
-    <h2 id="container_title">{{ cat }}<span class="sound_only"> 목록</span></h2>
-
-    <div class="tbl_frm01 tbl_wrap tbl-content">
-        <table>
-            <tbody>
-            <tr>
-                <th scope="row">제목</th>
-                <td colspan="5">{{ post.title }}</td>
-            </tr>
-            <tr>
-                <th>작성자</th>
-                <td><span class="sv_member">{{ post.author }}</span></td>
-                <th>작성일</th>
-                <td>{{post.created|date:"y-m-d h:i"}}</td>
-            </tr>
-            <tr>
-                <td colspan="6" class="td-content">
-                    <div id="bo_v_img">
-                    </div>
-                    <div id="bo_v_con">{{ post.text }}
-                        {% if post.photo %}
-                        <img src="{{post.photo.url}}" alt="post_image">
-                        {% endif %}
-                    </div>
-                </td>
-            </tr>
-
-            </tbody>
-        </table>
-    </div>
-
-
-
-
-
-
-
-
+            <h2 id="container_title">중앙운영위원회</h2>
+            <span class="path">홈 > 게시판</span>
+            {% load static %}
+            <div class="tbl_frm01 tbl_wrap tbl-content">
+                <table>
+                    <tbody>
+                    <tr>
+                        <th scope="row">제목</th>
+                        <td colspan="5">{{ post.title }}</td>
+                    </tr>
+                    <tr>
+                        <th>작성자</th>
+                        <td><span class="sv_member">{{ post.author }}</span></td>
+                        <th>작성일</th>
+                        <td>{{post.created|date:"y-m-d h:i"}}</td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" class="td-content">
+                            <div id="bo_v_img">
+                            </div>
+                            <div id="bo_v_con">{{ post.text }}
+                                {% if post.photo %}
+                                <img src="{{post.photo.url}}" alt="post_image">
+                                {% endif %}
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}

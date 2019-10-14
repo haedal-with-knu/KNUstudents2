@@ -7,10 +7,11 @@ def category_all(request,category):
     if (category=='introduction'):
         category='국별 소개'
         posts = Post_introduction.objects.all()
+        return render(request, 'excution/category.html', {'posts': posts, 'category': category})
     else:
         category='게시판'
         posts = Post_board.objects.all()
-    return render(request, 'excution/category.html', {'posts': posts, 'category':category})
+    return render(request, 'excution/detail.html', {'posts': posts, 'category':category})
 
 
 def post_detail(request, category, id):
