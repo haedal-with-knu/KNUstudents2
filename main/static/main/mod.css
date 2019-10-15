@@ -1,3 +1,4 @@
+/* main/mod.css*/
 @font-face {
   font-family: 'Nanum Barun Gothic';
   font-style: normal;
@@ -411,7 +412,7 @@ html, body {
 }
 #wrapper.main > #container div.abs-block > div.center-block {
   display: inline-block;
-  width: 960px;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
@@ -485,6 +486,7 @@ html, body {
 }
 
 .main-description-box{
+    width: 960px;
     padding: 100px 20px;
     text-align: center;
     line-height: 24px;
@@ -509,6 +511,7 @@ html, body {
 }
 
 .main-quick-menu-box{
+    width: 960px;
     padding-bottom:30px;
     text-align: center;
     background-color: #ece8e4;
