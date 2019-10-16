@@ -12,7 +12,11 @@
   <link rel="stylesheet"  href="{% static 'mod.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
   <link rel="shortcut icon" href="{% static 'favicon.txt' %}">
-
+    <style>
+        #footer {
+            position: unset;
+        }
+    </style>
     {% block extrahead %}
     {% endblock %}
   <title>{% block title %}{% endblock %}</title>
