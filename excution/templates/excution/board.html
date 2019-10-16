@@ -4,7 +4,7 @@
 <div id="wrapper">
     <div id="container">
         <div class="side-menu">
-            <p class="main-title">중앙운영위원회</p>
+            <p class="main-title">중앙집행위원회</p>
             <ul class="menu">
                 <li><a class=" " href="{% url 'excution:category_all' 'introduction' %}">국별 소개</a></li>
                 <li><a class="inner-menu" href="/excution/introduction/culture/">-문화기획국</a></li>
@@ -19,7 +19,7 @@
         </div>
         <div class="board-list">
             <h2 id="container_title">{{ category }}<span class="sound_only"> 목록</span></h2>
-            <span class="path">홈 > 중앙운영위원회 > {{category}}</span>
+            <span class="path">홈 > 중앙집행위원회 > {{category}}</span>
 
             <div class="tbl_head01 tbl_wrap">
                 <table>
@@ -36,7 +36,7 @@
                     {% for post in posts %}
                     <tr class="">
                         <td class="td_num">{{post.id}}</td>
-                        <td class="td_subject"><a href="{% url 'operation:post_detail' post.category post.id %}">{{post.title}}</a></td>
+                        <td class="td_subject"><a href="{% url 'excution:post_detail' post.category post.id %}">{{post.title}}</a></td>
                         <td class="td_name sv_use"><span class="sv_member">{{post.author}}</span></td>
                         <td class="td_date">{{post.created|date:"m-d"}}</td>
                     </tr>

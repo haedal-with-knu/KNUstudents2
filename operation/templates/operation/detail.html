@@ -1,5 +1,17 @@
 {% extends 'base.html' %}
 {% block title %}중앙운영위원회 | {{ post.category }} | {{ post.title }}{% endblock %}
+{% block extrahead %}
+<style>
+    span.path{
+        float: right;
+        font-family: 'Nanum Barun Gothic';
+        font-size: 12px;
+        font-weight: 400;
+        color: #888888;
+        margin: 0 11px 21px 0;
+    }
+</style>
+{% endblock %}
 {% block contents %}
 <div id="wrapper">
     <div id="container">
@@ -35,7 +47,7 @@
 
         <div class="board-view">
             <h2 id="container_title">중앙운영위원회</h2>
-            <span class="path">홈 > 게시판</span>
+            <span class="path">홈 > 중앙운영위원회 > 게시판</span>
             {% load static %}
             <div class="tbl_frm01 tbl_wrap tbl-content">
                 <table>
@@ -54,7 +66,7 @@
                         <td colspan="6" class="td-content">
                             <div id="bo_v_img">
                             </div>
-                            <div id="bo_v_con">{{ post.text }}
+                            <div id="bo_v_con">{{ post.text|linebreaks  }}
                                 {% if post.photo %}
                                 <img src="{{post.photo.url}}" alt="post_image">
                                 {% endif %}
