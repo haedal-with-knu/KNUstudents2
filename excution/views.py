@@ -11,7 +11,7 @@ def category_all(request,category):
     else:
         category='게시판'
         posts = Post_board.objects.all()
-    return render(request, 'excution/detail.html', {'posts': posts, 'category':category})
+    return render(request, 'excution/board.html', {'posts': posts, 'category':category})
 
 
 def post_detail(request, category, id):
