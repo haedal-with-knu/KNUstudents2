@@ -15,6 +15,6 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
 # apache config
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-# sys.path.append('~/KNUstudents/config')
+sys.path.append('~/KNUstudents/config')
 
 application = get_wsgi_application()
