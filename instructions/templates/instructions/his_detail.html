@@ -8,7 +8,7 @@
                 <ul class="menu">
                     <li><a class=" " href="/instructions/">총학생회장단 인사</a></li>
                     <li><a class=" " href="/instructions/depart/">총학생회 조직도</a></li>
-                    <li><a class="current" href="#">역대 총학생회</a></li>
+                    <li><a class="current" href="/instructions/history/">역대 총학생회</a></li>
                 </ul>
             </div>
             <div class="board-view">
@@ -31,9 +31,9 @@
                                 <div id="bo_v_img">
                                 </div>
                                 <div id="bo_v_con">
-                                    {{ post.text|linebreaks }}
-                                    {% if post.photo %}
-                                    <img src="{{post.photo.url}}" alt="post_image">
+                                    {{ post.text|linebreaksbr }}
+                                    {% if post.image %}
+                                    <img src="{{post.image.url}}" alt="post_image">
                                     {% endif %}
                                 </div>
                             </td>
