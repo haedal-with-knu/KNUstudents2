@@ -28,7 +28,7 @@
                 <tbody>
                 {% for post in current_page %}
                 <tr class="">
-                    <td class="td_num">{{post.id}}</td>
+                    <td class="td_num">{{forloop.revcounter|add:page}}</td>
                     <td class="td_subject"><a href="{% url 'informations:post_detail' post.category post.id %}">{{post.title}}</a></td>
                     <td class="td_name sv_use"><span class="sv_member">{{post.author}}</span></td>
                     <td class="td_date">{{post.created|date:"m-d"}}</td>

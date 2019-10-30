@@ -31,7 +31,7 @@
                 <td colspan="6" class="td-content">
                     <div id="bo_v_img">
                     </div>
-                    <div id="bo_v_con">{{ post.text|linebreaks }}
+                    <div id="bo_v_con">{{ post.text|linebreaksbr }}
                         {% if post.photo %}
                         <img src="{{post.photo.url}}" alt="post_image">
                         {% endif %}
