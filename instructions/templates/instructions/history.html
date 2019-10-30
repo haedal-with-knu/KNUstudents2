@@ -29,34 +29,36 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                {% for a in object_list %}
+                                {% for post in current_page %}
                                     <tr class="">
-                                        <td class="td_num">{{a.id}}</td>
-                                        <td class="td_subject"><a href="{% url 'instructions:his_detail' a.id %}">{{a.postname}}</a></td>
-                                        <td class="td_name sv_use"><span class="sv_member">{{a.author}}</span></td>
-                                        <td class="td_date">{{a.updated|date:"y-m-d"}}</a></td>
+                                        <td class="td_num">{{forloop.revcounter|add:page}}</td>
+                                        <td class="td_subject"><a href="{% url 'instructions:his_detail' post.id %}">{{post.postname}}</a></td>
+                                        <td class="td_name sv_use"><span class="sv_member">{{post.author}}</span></td>
+                                        <td class="td_date">{{post.updated|date:"y-m-d"}}</a></td>
                                     </tr>
                                 {% endfor %}
                             </tbody>
                         </table>
                     </div>
+                    {% if is_paginated %}
                     <nav class="pg_wrap">
                         <span class="pg">
                             <div class="bootstrap2">
                                 <div class="pagination">
-                                    <ul class="pagination justify-content-center pagination-sm">
-                                        {% for object in page_obj.paginator.page_range %}
-                                            {% if page_obj.number == forloop.counter %}
-                                            <li><a class = "cur_page"><span class="sound_only">열린</span>{{ forloop.counter }}<span class="sound_only">페이지</span></a></li>
+                                    <ul>
+                                        {% for page_num in current_page.paginator.page_range %}
+                                            {% ifequal page_num current_page.number %}
+                                            <li><a class = "cur_page"><span class="sound_only">열린</span>{{ page_num }}<span class="sound_only">페이지</span></a></li>
                                             {% else %}
-                                            <li><a class="page-link" href="{{request.path}}?page={{forloop.counter}}">{{forloop.counter}}</a></li>
-                                            {% endif %}
+                                            <li><a href="?page={{page_num}}">{{ page_num }}<span class="sound_only">페이지</span></a></li>
+                                            {% endifequal %}
                                         {% endfor %}
                                     </ul>
                                 </div>
                             </div>
                         </span>
                     </nav>
+                    {% endif %}
 
             </div>
         </div>
