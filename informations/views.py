@@ -14,6 +14,7 @@ def category_all(request,category):
         page = request.GET.get('page') or 1
 
         current_page = paginator.page(page)
+
     else:
         category='안건지/회의록'
         posts = Post_minutes.objects.all().order_by('-created')
@@ -24,7 +25,14 @@ def category_all(request,category):
 
         current_page = paginator.page(page)
 
-    return render(request, 'informations/category.html', {'posts': posts, 'category':category, 'current_page': current_page, 'is_paginated':is_paginated})
+    all_num = paginator.count-10
+    if int(page) == round(paginator.count/10 + 0.5):
+        all_num=0
+        num = 0
+    else:
+        num = 10*(int(page)-1)
+    p = all_num - num
+    return render(request, 'informations/category.html', {'page':p, 'posts': posts, 'category':category, 'current_page': current_page, 'is_paginated':is_paginated})
 
 
 
