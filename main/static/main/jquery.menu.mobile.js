@@ -30,7 +30,7 @@ $(function(){
         hide_menu = false;
     });
 
-    $(".gnb_2dli").mouseout(function() {
+    $(".gnb_1dli").mouseout(function() {
         hide_menu = true;
     });
 
@@ -54,12 +54,19 @@ $(function(){
         hide_menu = false;
     });
 
+
+
+
     $(".gnb_2da").focusout(function() {
         hide_menu = true;
     });
     $(".gnb_2dul").bind('mouseleave',function(){
         submenu_hide();
     });
+    $(".gnb_2dul").bind('mouseover',function(){
+        hide_menu = false;
+    });
+
     /*
     $('#gnb_1dul>li').bind('mouseleave',function(){
         submenu_hide();
