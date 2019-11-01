@@ -112,9 +112,9 @@ a:hover, a:focus, a:active {color:#000;text-decoration:underline}
 
 #aside {float:right;margin:0 0 0 -1px;width:210px;border-left:1px solid #dde4e9;background:#fff}
 
-#container {z-index:4;position:relative;float:left;padding:15px 16px 15px 15px;width:728px;min-height:500px;height:auto !important;height:500px;border-right:1px solid #dde4e9;background:#fff;font-size:1em;zoom:1}
+#container {z-index:4;position:relative;float:left;padding:15px 16px 15px 15px;width:728px;min-height:500px;height:auto !important;height:500px;border-right:1px solid #dde4e9;background:#fff;font-size:1.5em;zoom:1}
 #container:after {display:block;visibility:hidden;clear:both;content:""}
-#container_title {margin-bottom:20px;font-size:1.2em;font-weight:bold}
+#container_title {margin-bottom:20px;font-size:1.5em;font-weight:bold}
 
 /* 하단 레이아웃 */
 #ft {min-width:970px;border-top:1px solid #dde4e9;background:#f2f5f9}

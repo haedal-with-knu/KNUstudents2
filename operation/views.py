@@ -1,17 +1,31 @@
 from django.shortcuts import render
 from .models import *
+from django.core.paginator import  Paginator
 
 # Create your views here.
+def intro(request):
+    category = '단위별 소개'
+    return render(request, 'operation/category.html')
 
 def category_all(request,category):
-    if (category=='introduction'):
-        category='단위별 소개'
-        posts = Post_introduction.objects.all()
-        return render(request, 'operation/category.html', {'posts': posts, 'category':category})
+    category='게시판'
+    posts = Post_board.objects.all().order_by('-created')
+    paginator = Paginator(posts, 10)
+
+    is_paginated = True if paginator.num_pages > 1 else False
+    page = request.GET.get('page') or 1
+
+    current_page = paginator.page(page)
+
+    all_num = paginator.count - 10
+    if int(page) == round(paginator.count / 10 + 0.5):
+        all_num = 0
+        num = 0
     else:
-        category='게시판'
-        posts = Post_board.objects.all()
-        return render(request, 'operation/board.html', {'posts': posts, 'category': category})
+        num = 10 * (int(page) - 1)
+    p = all_num - num
+    return render(request, 'operation/board.html',
+                  {'page':p,'posts': posts, 'current_page': current_page, 'is_paginated': is_paginated})
 
 def post_detail(request, category, id):
     if category == 'board':
