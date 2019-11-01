@@ -5,6 +5,7 @@ from .views import *
 app_name = 'operation'
 
 urlpatterns= [
+    path('', intro, name='intro'),
     path('<str:category>/', category_all, name='category_all'),
     path('<str:category>/detail/<int:id>', post_detail, name='post_detail'),
     path('introduction/sangju/', sangju, name='sangju'),

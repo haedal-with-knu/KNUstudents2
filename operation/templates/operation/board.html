@@ -7,7 +7,7 @@
             <p class="main-title">중앙운영위원회</p>
             <ul class="menu">
                 <li><a class=" " href="{% url 'operation:category_all' 'board' %}">게시판</a></li>
-                <li><a class=" " href="{% url 'operation:category_all' 'introduction' %}">단위별 소개</a></li>
+                <li><a class=" " href="{% url 'operation:intro' %}">단위별 소개</a></li>
                 <li><a class="inner-menu" href="/operation/introduction/sangju">-상주학생위원회</a></li>
                 <li><a class="inner-menu" href="/operation/introduction/dongari">-총동아리연합회</a></li>
                 <li><a class="inner-menu" href="/operation/introduction/humanities">-인문대학</a></li>
@@ -48,9 +48,9 @@
                         </tr>
                     </thead>
                     <tbody>
-                    {% for post in posts %}
+                    {% for post in current_page %}
                     <tr class="">
-                        <td class="td_num">{{post.id}}</td>
+                        <td class="td_num">{{forloop.revcounter|add:page}}</td>
                         <td class="td_subject"><a href="{% url 'operation:post_detail' post.category post.id %}">{{post.title}}</a></td>
                         <td class="td_name sv_use"><span class="sv_member">{{post.author}}</span></td>
                         <td class="td_date">{{post.created|date:"m-d"}}</td>
@@ -59,6 +59,25 @@
                     </tbody>
                 </table>
             </div>
+            {% if is_paginated %}
+            <nav class="pg_wrap">
+                <span class="pg">
+                    <div class="bootstrap2">
+                        <div class="pagination">
+                            <ul>
+                                {% for page_num in current_page.paginator.page_range %}
+                                    {% ifequal page_num current_page.number %}
+                                    <li><a class = "cur_page"><span class="sound_only">열린</span>{{ page_num }}<span class="sound_only">페이지</span></a></li>
+                                    {% else %}
+                                    <li><a href="?page={{page_num}}">{{ page_num }}<span class="sound_only">페이지</span></a></li>
+                                    {% endifequal %}
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </span>
+            </nav>
+            {% endif %}
 
 
 
