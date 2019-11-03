@@ -1,5 +1,12 @@
 {% extends 'base.html' %}
 {% block title %} | 경북대학교 총학생회{% endblock %}
+{% block extrahead %}
+<style>
+    .tbl_frm01 a:hover {
+    text-decoration: underline;
+    }
+</style>
+{% endblock %}
 {% block contents %}
 <div id="wrapper">
         <div id="container">
@@ -25,6 +32,11 @@
                             <td><span class="sv_member">{{ post.author }}</span></td>
                             <th>작성일</th>
                             <td>{{ post.updated|date:"y-m-d h:i" }}</td>
+                            {% if post.file %}
+                        {% load filename %}
+                        <th style="width:80px">첨부파일</th>
+                        <td><a href="{{post.file.url}}" style="">{{ post.file | getfilename }}</a></td>
+                        {% endif %}
                         </tr>
                         <tr>
                             <td colspan="6" class="td-content">

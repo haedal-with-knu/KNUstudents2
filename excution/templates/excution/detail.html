@@ -10,6 +10,9 @@
         color: #888888;
         margin: 0 11px 21px 0;
     }
+    .tbl_frm01 a:hover {
+    text-decoration: underline;
+    }
 </style>
 {% endblock %}
 {% block contents %}
@@ -46,6 +49,11 @@
                         <td><span class="sv_member">{{ post.author }}</span></td>
                         <th>작성일</th>
                         <td>{{post.created|date:"y-m-d h:i"}}</td>
+                        {% if post.file %}
+                        {% load filename %}
+                        <th style="width:80px">첨부파일</th>
+                        <td><a href="{{post.file.url}}" style="">{{ post.file | getfilename }}</a></td>
+                        {% endif %}
                     </tr>
                     <tr>
                         <td colspan="6" class="td-content">
